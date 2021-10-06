@@ -22,15 +22,12 @@ Pi4J 2.0 版本带来了许多新功能，以及一个全新的体系结构，�
 
 除了上面列出的功能外，Pi4J 2.0 版本还放弃了旧的 WiringPi 引脚编号方案，转而采用更为传统和常用的 Broadcom 引脚编号方案。多年来，这种引脚编号方案一直比较混乱，对于初学者来说经常摸不到头脑。并且由于新的 Raspberry Pi 型号引入了新的 GPIO 引脚，以至于维护起来有些麻烦。今后，Pi4J将只使用 Broadcom（BCM）的引脚编号方案。
 
-WiringPi 项目现在已经废弃 (详情请查看： [wiringpi.com/wiringpi-deprecated/](http://wiringpi.com/wiringpi-deprecated/))。Pi4J 2.0 版本将不再基于WiringPi，而是在内部使用 PIGPIO ([http://abyz.me.uk/rpi/pigpio/](http://abyz.me.uk/rpi/pigpio/)) 库进行底层集成。
+WiringPi 项目现在已经废弃 (详情请查看： [wiringpi.com/wiringpi-deprecated/](http://wiringpi.com/wiringpi-deprecated/))。Pi4J 2.0 版本将不再基于WiringPi，而是在内部使用 PIGPIO ([http://abyz.me.uk/rpi/pigpio/](http://abyz.me.uk/rpi/pigpio/)) 库进行底层集成。通过这次迁移，运用 PIGPIO 守护进程，我们还将支持远程 I/O 特性（通过 TCP 连接）
 
-The WiringPi project has now been deprecated (see [wiringpi.com/wiringpi-deprecated/](http://wiringpi.com/wiringpi-deprecated/)). 
-Pi4J version 2.0 will no longer be based on WiringPi and has moved to using the PIGPIO library 
-([http://abyz.me.uk/rpi/pigpio/](http://abyz.me.uk/rpi/pigpio/)) internally for low level integation. 
-With this move, we will also support the remote I/O features (via TCP socket) offered by the PIGPIO daemon 
-([http://abyz.me.uk/rpi/pigpio/pigpiod.html](http://abyz.me.uk/rpi/pigpio/pigpiod.html)).
 
-## What are the differences compared to V.1?
+## 和 V.1 版本对比有什么不同
+
+从 Pi4J 2.0 版本开始构建以来，Pi4J 项目将重点放在了用 Java 程序
 
 Starting with the Pi4J 2.0 builds, the Pi4J project is prioritizing focus on providing Java programs access, 
 control and communication with the core I/O capabilities of the Raspberry Pi platform. Earlier versions of Pi4J were 

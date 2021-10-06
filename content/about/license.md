@@ -1,7 +1,11 @@
 ---
-title: 'License (Open Source)'
+title: '开源证书'
 weight: 50
 ---
+
+
+
+Pi4J 2.0 版本是基于**Apache  2.0 证书**（商业友好的 OSS 证书）
 
 The Pi4J Version 2.0 project is distributed and licensed under the **Apache License, Version 2.0** license 
 (_A business-friendly OSS license_).
@@ -188,7 +192,7 @@ The Pi4J Version 2.0 project is distributed and licensed under the **Apache Lice
 
    END OF TERMS AND CONDITIONS
 
-   APPENDIX: How to apply the Apache License to your work.
+   附录：怎么在你的项目中使用 Apache 证书
 
       To apply the Apache License to your work, attach the following
       boilerplate notice, with the fields enclosed by brackets "[]"

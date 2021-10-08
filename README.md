@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# pi4j_cn
-pi4j 中文翻译
-=======
 # Pi4J 网站
 
 ## GoHugo
@@ -66,4 +62,3 @@ hugo serve
 
 * [Automate your GitHub Pages Deployment using Hugo and Actions](https://medium.com/@asishrs/automate-your-github-pages-deployment-using-hugo-and-actions-518b959a51f9)
 * [Deploy Hugo project to GitHub Pages with GitHub Actions](https://discourse.gohugo.io/t/deploy-hugo-project-to-github-pages-with-github-actions/20725)
->>>>>>> 30c06322d5e0fc1a043bd49d2377cdb971450f5e

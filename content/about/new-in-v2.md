@@ -31,9 +31,11 @@ WiringPi 项目现在已经废弃 (详情请查看： [wiringpi.com/wiringpi-dep
 
 下面的一些特性在 Pi4J 库中被移除：
 
-* **IO Expanders** -- IO expansion is still supported but concrete implementations should be provided outside the core Pi4J core project such that they can be maintained and extended independently.
-* **Other Platforms** -- Other platforms such as Odroid, BananaPi, NanoPi, OrangePi, etc. have been removed and will no longer be supported. The challenge with supporting these additional platforms is that Pi4J depends on the underlying WiringPi project and WiringPi ports for these other platforms is not well supported by the various SoC vendors or community. The various WiringPi ports for these other platforms are also inconsistent causing inconsistent features and functionality of Pi4J. Additionally, regression testing of bug fixes and new features in Pi4J is compounded with each additional supported platform.
-* **Components & Devices** -- Pi4J originally provided higher level interfaces for components and devices that provided an abstraction layer between real world devices (things) and lower-level I/O interfaces. While a noble goal, unfortunately this part of the project never received the attention and time that it deserved and never gained much adoption by the community. We are removing these to allow Pi4J to focus solely on the raw I/O supported by the Raspberry Pi platform.
+* **IO 扩展** -- IO 扩展仍然会提供支持，但是会在 Pi4J 核心包之外提供，这样也方便与他们的独立维护和扩展。
+
+* **其他平台** -- 其他的一些平台，例如： Odroid、BananaPi、NanoPi、OrangePi 等已被移除，将不再支持。这些额外平台的挑战在于 Pi4J 依赖于底层的 WiringPi 项目，而这些其他平台的 WiringPi 端口并没有得到各种 SoC 供应商或社区的良好支持。这些其他平台的各种 WiringPi 端口也不一致，导致 Pi4J 的特性和功能表现不一致。而且 Pi4J 项目的，bug 修复和新功能的回归测试，需要在每个平台上测试通过。
+
+* **组件、设备** -- Pi4J 原本为组件和设备提供更高级别的接口，在现实世界的设备和底层的 I/O 接口之间提供抽象层，虽然这是一个崇高的目标，但不幸的是，该项目的这一部分没有得到应有的关注，也没有被社区广泛采用。我们正在删除这些，以便于 Pi4J 能专注于 Raspberry Pi 平台底层 I/O。
 
 ## Sources
 

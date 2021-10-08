@@ -27,16 +27,9 @@ WiringPi 项目现在已经废弃 (详情请查看： [wiringpi.com/wiringpi-dep
 
 ## 和 V.1 版本对比有什么不同
 
-从 Pi4J 2.0 版本开始构建以来，Pi4J 项目将重点放在了用 Java 程序
+从 Pi4J 2.0 版本开始构建以来，Pi4J 项目将重点放在了用 Java 程序，控制和访问树莓派平台的核心 I/O 。在 Pi4J 的早期版本中，在项目范围上过于宽泛，导致项目严重膨胀，以至于项目难以维护。现在的目标转移到树莓派底层的 I/O 功能范围内，并将更快的响应 bug 的修复，以及新平台的引入。新的项目范围通过降低访问底层 I/O 复杂性，更好的额服务于 Java 社区。
 
-Starting with the Pi4J 2.0 builds, the Pi4J project is prioritizing focus on providing Java programs access, 
-control and communication with the core I/O capabilities of the Raspberry Pi platform. Earlier versions of Pi4J were 
-perhaps too ambitious in scope and that led to significant project bloat to the point that the project was becoming 
-unsustainable. The goal moving forward is to limit scope to that of the raw I/O capabilities of the Raspberry Pi 
-platform and provide timely updates and releases for bug fixed and new RaspberryPi model introductions. Reducing 
-the scope of the project should better serve the Java community for basic I/O access by reducing complexity.
-
-The following features have been removed from the Pi4J library:
+下面的一些特性在 Pi4J 库中被移除：
 
 * **IO Expanders** -- IO expansion is still supported but concrete implementations should be provided outside the core Pi4J core project such that they can be maintained and extended independently.
 * **Other Platforms** -- Other platforms such as Odroid, BananaPi, NanoPi, OrangePi, etc. have been removed and will no longer be supported. The challenge with supporting these additional platforms is that Pi4J depends on the underlying WiringPi project and WiringPi ports for these other platforms is not well supported by the various SoC vendors or community. The various WiringPi ports for these other platforms are also inconsistent causing inconsistent features and functionality of Pi4J. Additionally, regression testing of bug fixes and new features in Pi4J is compounded with each additional supported platform.

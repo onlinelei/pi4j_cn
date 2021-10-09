@@ -1,7 +1,9 @@
 ---
-title: Download/Install
+title: 下载/安装
 weight: 20
 ---
+
+
 
 Getting started with V.2 in the state of June 3th of 2020.
 

@@ -37,14 +37,12 @@ WiringPi 项目现在已经废弃 (详情请查看： [wiringpi.com/wiringpi-dep
 
 * **组件、设备** -- Pi4J 原本为组件和设备提供更高级别的接口，在现实世界的设备和底层的 I/O 接口之间提供抽象层，虽然这是一个崇高的目标，但不幸的是，该项目的这一部分没有得到应有的关注，也没有被社区广泛采用。我们正在删除这些，以便于 Pi4J 能专注于 Raspberry Pi 平台底层 I/O。
 
-## Sources
+## 源码
 
-The Pi4J V.2 source code is available in this GitHub repository: [Pi4J V.2 GitHub Repository](https://github.com/Pi4J/pi4j-v2)
+Pi4J 2.0 版本的源代码 GitHub 地址：[Pi4J V.2 GitHub Repository](https://github.com/Pi4J/pi4j-v2)
 
 ```shell
 git clone https://github.com/Pi4J/pi4j-v2
 ```
 
-Pi4J V.2 had the first release in August 2021. Rework from V.1 to V.2 took quit some time and will never be finished, but
-we are confident this is a great library to develop Java application on the Raspberry Pi. Any remarks and contributions
-are welcome as either bug reports or discussions in the [GitHub repository](https://github.com/Pi4J/pi4j-v2).
+Pi4J 2.0 版本于 2021 年 8 月首次发布。从 V.1 到 V.2 的返工花费了一些时间并且还在继续，但我们确信这是一个在 Raspberry Pi 上开发 Java 应用程序的好库。欢迎大家在 github 中提出任何评论和bug 或者参与到项目的开发中。

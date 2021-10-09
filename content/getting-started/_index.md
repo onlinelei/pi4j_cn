@@ -1,23 +1,22 @@
 ---
-title: Getting started with Pi4J
+title: Pi4J 入门
 weight: 20
 ---
 
-You have a Raspberry Pi? And you want to use Java as your programming language to build performant, easy-to-maintain 
-and powerful applications? This is the place to be!!!
+你有树莓派吗？您想使用 Java 作为您的编程语言来构建高性能、易于维护且功能强大的应用程序吗？那这就是要来的地方！！！
 
-The pages in this chapter explain you how to get started in different steps. The full documentation for the library,
-with more in-depth and technical info, can be found in the "[Documentation](/documentation/)" chapter.
+本章节列出了各个步骤。更深入的技术信息，可以在 [完整文档](/documentation/) 找到
 
-This part of the site takes you through the different steps to start "from scratch":
 
-1. [Setting up the Raspberry Pi with all the tools needed](/getting-started/set-up-a-new-raspberry-pi/)
-2. [Understanding the GPIO pins](/getting-started/understanding-the-pins/)
-3. [Java development on the Raspberry Pi with Visual Studio Code](/getting-started/java-development-on-the-raspberry-pi-with-vsc/)
-4. [Using a Linux/Windows/Mac separate computer as developing workstation](/getting-started/developing-on-a-remote-pc/)
-5. [Minimal example application with an LED and button](/getting-started/minimal-example-application/)
-6. [Introduction to electronics with CrowPi](/getting-started/introduction-to-electronics-with-crowpi/)
-7. [Adding a user interface with JavaFX](/getting-started/user-interface-with-javafx/)
-8. [Game development with FXGL and an Arcade controller](/getting-started/game-development-with-fxgl/)
+网站的这一部分，将帮助您完成从头开始，完成各个步骤：
 
-And if you still want to learn more, we have a [list of additional resources](/getting-started/learn-more/).
+1. [设置树莓派，以及使用到的工具](/getting-started/set-up-a-new-raspberry-pi/)
+2. [理解 GPIO 引脚](/getting-started/understanding-the-pins/)
+3. [使用 Visual Studio Code 在 Raspberry Pi 上进行 Java 开发](/getting-started/java-development-on-the-raspberry-pi-with-vsc/)
+4. [使用 Linux/Windows/Mac 计算机作为开发工作站](/getting-started/developing-on-a-remote-pc/)
+5. [使用 LED 和按钮的最小示例应用](/getting-started/minimal-example-application/)
+6. [使用 CrowPi 介绍电子产品](/getting-started/introduction-to-electronics-with-crowpi/)
+7. [使用 JavaFX 添加用户界面](/getting-started/user-interface-with-javafx/)
+8. [使用 FXGL 和 Arcade 控制器进行游戏开发](/getting-started/game-development-with-fxgl/)
+
+如果您仍想了解更多信息，我们有 [其他资源列表](/getting-started/learn-more/)

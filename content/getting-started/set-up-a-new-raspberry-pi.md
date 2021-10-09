@@ -1,51 +1,45 @@
 ---
-title: Set up a new Raspberry Pi
+title: 设置一个新的树莓派
 weight: 30
 ---
 
-## Introduction
+## 介绍
 
-The Raspberry Pi is a powerful machine with many use-cases. A lot of this power is based on the 
-operating system you use. For our "Getting Started" examples we will be using the "official Raspberry
-Pi OS" (formerly known as "Raspbian OS") but there is a long list of other possibilities which is listed
-for example on the["Awesome Raspberry Pi" list on GitHub](https://github.com/thibmaek/awesome-raspberry-pi/blob/master/README.md).
+Raspberry Pi 是一款功能强大的机器，有很多的使用示例。这很大程度上是基于您使用的操作系统，对于我们的“入门”示例，使用的是“官方 RaspberryPi OS”（以前称为“Raspbian OS”）。还有其他很多可玩性，例如在 GitHub 上的[“Awesome Raspberry Pi”列表](https://github.com/thibmaek/awesome-raspberry-pi/blob/master/README.md).
 
-In this article we start with a brand new Raspberry Pi board.
+在本文中，我们从全新的 Raspberry Pi 开发板开始。
 
-## Step-by-step
+## 一步步来
 
-First step: take your new Raspberry Pi out of the box of course :-)
+第一步：当然是从盒子里将新的树莓派取出来 :-)
 
-Take a good look at it, what you are holding in your hands is a true master piece. A wonder of technical
-engineering with a perfect mix of powerful yet inexpensive components.
+仔细看看，你手里拿着的才是真正的杰作。技术工程的奇迹，完美结合了强大而廉价的组件。
 
-But be aware! This is also some piece of sensitive electronics. It's always a good idea to first touch
-the grounding pin of a power outlet to make sure your body is not electrically charged which could damage
-one of the components on the board.
+但要注意！这也是一些敏感的电子产品。首先触摸电源插座的接地引脚始，以确保您的身体没有静电，如果有静电可能会损坏板子。
 
-TODO add picture.
 
-### Material list
+TODO 添加图片。
+
+### 材料清单
 
 * Raspberry Pi
-* Micro SD card, minimally 16Gb b
-* PC (or other Raspberry Pi) with an SD card slot (maybe you will need an SD card adapter)
-* Power supply (5V, 2 or 3A)
-* Monitor, keyboard, mouse
+* 内存卡，最低 16 GB
+* 电脑（或者其他的树莓派）
+* 带有 SD 卡插槽的 PC（或其他树莓派）（也许您需要一个 SD 卡适配器）
+* 电源（5V，2A 或者 3A）
+* 显示器、键盘、鼠标
 
 ### SD card
 
-The SD card will hold the operating system. On the Raspberry Pi website, [on the download page, you can
-find the Imager tool](https://www.raspberrypi.org/software/). Select the version for your computer, download
-and install it.
+SD 卡将保存操作系统。在 Raspberry Pi 官网上，[下载页面，找到 Imager 工具](https://www.raspberrypi.org/software/)。选择适合您电脑的版本，下载并安装。
 
 ![Imager download](/assets/getting-started/setup/download-imager.png)
 
-Start the Imager and follow these steps:
+启动 Imager 工具并按照以下步骤操作：
 
-1. Click on "Operating System" > "CHOOSE OS"
-2. Select "Raspberry Pi OS (other)"
-3. Select "Raspberry Pi OS Full (32-bit)"
+1. 点击“操作系统”>“选择操作系统”
+2. 选择“树莓派操作系统（其他）”
+3. 选择“Raspberry Pi OS Full (32-bit)”
 
 {{< gallery >}}
 {{< figure link="/assets/getting-started/setup/imager-os-1.png" caption="" caption-position="center" caption-effect="fade" >}}
@@ -54,23 +48,22 @@ Start the Imager and follow these steps:
 {{< /gallery >}}
 {{< load-photoswipe >}}
 
-By selecting the "Full" edition, we will have an operating system which is preloaded with a load of additional tools,
-including "OpenJDK 11", so will be able to take a quick start with Java development.
 
-4. Put your SD card into your computer or in an SD card reader you can connect to USB
-5. Click on "SD Card" > "CHOOSE SD CARD"
-6. Select the SD card 
+通过选择“完整”版本，我们将拥有一个预装了大量附加工具的操作系统，包括“OpenJDK 11”，因此将能够快速开始 Java 开发。
 
-TODO add pictures
+4. 将您的 SD 卡插入您的计算机或您可以连接到 USB 的 SD 卡读卡器
+5.点击“SD卡”>“选择SD卡”
+6.选择SD卡
 
-### First start-up
+TODO 添加图片
 
-#### Additional Raspberry Pi OS settings
+### 首次启动
 
-#### Check the Java version
+#### 树莓派操作系统其他设置
 
-As we have put the Full edition on the SD card, Java is already available. Open a terminal window and type in `java -version`.
-Java will be started to show you the installed version.
+#### 检查 Java 版本
+
+由于我们已将完整的操作系统烧录在 SD 卡上，因此 Java 已经可用。打开终端窗口并输入`java -version`。可以看到 Java 版本。
 
 ```
 $ java -version
@@ -79,22 +72,19 @@ OpenJDK Runtime Environment (build 11.0.9+11-post-Raspbian-1deb10u1)
 OpenJDK Server VM (build 11.0.9+11-post-Raspbian-1deb10u1, mixed mode)
 ```
 
-### Install Pi4J
+### 安装 Pi4J
 
 TODO
 
-## Keep your Raspberry Pi up-to-date
+## 使您的 Raspberry Pi 保持最新状态
 
-### Update to the latest version
+### 更新到最新
 
-Open a terminal and perform following commands
+打开终端并执行以下命令:
 
 ```
 sudo apt update
 sudo apt full-upgrade
 ```
 
-Raspberry Pi OS is based on [Debian](https://www.debian.org/) - one of the largest Linux distrubutions. When running 
-these commands regularly, you will keep your installation up to date for the particular major Raspberry Pi OS 
-release you are using (e.g. Debian V9, aka Stretch). It will not update from one major release to another, for example, 
-Stretch (V9) to Buster (V10). 
+Raspberry Pi OS 基于 [Debian](https://www.debian.org/) - 它是最大的 Linux 发行版之一，您正在使用的是 Raspberry Pi OS 版本（例如 Debian V9，又名 Stretch）。定期运行这些命令，可以使您的系统保持最新。更新命令不会从一个主要版本更新到另一个版本，例如，Stretch (V9) 到 Buster (V10)。

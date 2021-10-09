@@ -5,13 +5,13 @@ weight: 20
 
 
 
-Getting started with V.2 in the state of June 3th of 2020.
+在 2020 年 6 月 3 日开始使用 V.2。
 
 ## Pi4J V.2
 
-* Checkout the project [pi4j-v2](https://github.com/Pi4J/pi4j-v2)
-* Select JDK11, e.g. ``sdk use java 11.0.7.fx-librca``
-* In the root of pi4j-v2 run `m̀vn clean install``
+* 检出项目 [pi4j-v2](https://github.com/Pi4J/pi4j-v2)
+* 选择使用 JDK11 例如：``sdk use java 11.0.7.fx-librca``
+* 在 pi4j-v2 根目录，运行`m̀vn clean install``
 
 ```
 [INFO] Executed tasks
@@ -35,14 +35,14 @@ Getting started with V.2 in the state of June 3th of 2020.
 [INFO] ------------------------------------------------------------------------
 ```
 
-## Example application
+## 示例程序
 
-### Building the example application
+### 构建示例应用程序
 
-* Checkout the project [Pi4J V.2 - Telegraph Demo Project](https://github.com/Pi4J/pi4j-demo-telegraph)
-* Select JDK11, e.g. ``sdk use java 11.0.7.fx-librca``
-* In the root of pi4j-demo-telegraph run `m̀vn clean install``
-* Check the directory target\distribution --> this contains all the files to be copied to the Raspberry Pi
+* 检出项目 [Pi4J V.2 - Telegraph Demo Project](https://github.com/Pi4J/pi4j-demo-telegraph)
+* 选择使用 JDK11 例如：``sdk use java 11.0.7.fx-librca``
+* 在 pi4j-demo-telegraph 根目录运行 `m̀vn clean install``
+* 检查目录：target\distribution --> 这包含了要复制到 Raspberry Pi 的所有文件
 
 ```
 /target/distribution/pi4j-core-2.0-SNAPSHOT.jar
@@ -55,6 +55,5 @@ Getting started with V.2 in the state of June 3th of 2020.
 /target/distribution/slf4j-simple-2.0.0-alpha0.jar
 ```
 
-### Running on the Raspberry Pi
-
-* After copying all files from target/distribution to a Raspberry Pi, start `./run.sh`
+### 在 Raspberry Pi 上运行
+* 将 target/distribution 目录下的文件都拷贝到 Raspberry Pi 以后，运行 `./run.sh` 

@@ -1,6 +1,6 @@
 ---
-title: Installation
+title: 安装
 weight: 40
 ---
 
-This project is still in development and thus no package installers are available at this time.
+该项目仍在开发中，因此目前没有可用的软件包安装程序。

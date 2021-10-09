@@ -1,23 +1,21 @@
 ---
-title: Understanding the GPIO pins
+title: 了解 GPIO 引脚
 weight: 35
 ---
 
-Connecting electronic components to the Pi is done via one or more of the pins in the so-called header. The number of 
-pins has "grown" between the different Raspberry Pi board versions, but all recent ones have a 40-pin header. It's of
-course important to be aware of the correct numbering to not correct components the wrong way.
+将电子元件连接到 Pi 是通过连接接头中的一个或多个引脚完成的。引脚的数量随着 Raspberry Pi 板版本增长而“增长”，现在最新版本固定在 40 个引脚。需要注意的是引脚的编号，以免以错误的方式连接到组件。
 
 ![Numbering of the pins](/assets/getting-started/pins/headernumber-on-board.jpg)
 
-## Type of pins
+## 引脚类型
 
-The pins have different uses
+引脚有不同的用途
 
-### Power and ground
+### 电源和地
 
-Both 5V and 3.3V are available as power pins and, of course, also ground pins. Anytime the board is powered you have a 
-fixed power supply available for your components. You have to take into account not to connect devices that need a lot 
-of current, otherwise the Raspberry Pi itself will not behave as expected and reboot for instance.
+5V 和 3.3V 均可用作电源引脚，接地引脚也是电源引脚。每当电路板通电时，您的组件都可以使用固定电源。您必须考虑不要连接需要大量电流的设备，否则 Raspberry Pi 本身将无法按预期运行并重启。
+
+Both 5V and 3.3V are available as power pins and, of course, also ground pins. Anytime the board is powered you have a fixed power supply available for your components. You have to take into account not to connect devices that need a lot of current, otherwise the Raspberry Pi itself will not behave as expected and reboot for instance.
 
 ### Digital GPIO
 

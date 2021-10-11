@@ -11,7 +11,7 @@ GITHUB 项目: [https://github.com/Pi4J/pi4j-maven-archetype](https://github.com
 
 直接在 Raspberry Pi 板上编写您的 Java 程序，编译并运行它，像前一章说的那样，完全没问题。我们还可以使用普通台式计算机作为远程开发工作站（RDW）。
 
-这个 [Maven Archetype]（https://github.com/Pi4J/pi4j-maven-archetype "raspimaven-archetype"）会给你一个工具来生成Pi4J-V2骨架Java项目。你可以将它用于你的下一个 Pi4j 项目，你可以在远程工作站 (RDW) 上开发你的程序，编译它们，在目标 Pi 板上传输可执行代码并运行它。同样还可以启动远程调试。
+这个 [Maven Archetype](https://github.com/Pi4J/pi4j-maven-archetype)会给你一个工具来生成Pi4J-V2骨架Java项目。你可以将它用于你的下一个 Pi4j 项目，你可以在远程工作站 (RDW) 上开发你的程序，编译它们，在目标 Pi 板上传输可执行代码并运行它。同样还可以启动远程调试。
 
 使用这样的开发模式，会有一些优点和缺点：
 
@@ -23,55 +23,58 @@ GITHUB 项目: [https://github.com/Pi4J/pi4j-maven-archetype](https://github.com
     - 你不能运行 Web 项目（使用 web 容器，例如 Tomcat 或者 similar）
 
 ## 设置
-### Configure the RPi for Headless mode
-The _Headless Mode_ configuration enables the RPi board to communicate with the RDW over SSH protocol.
-These are the needed steps:
-- Check if the RDW is equipped with a SSH Client. If the RDW OS is Linux you already have it 
-- For Windows you can use _putty_, _MobaXterm_ or you can enable the (new) OpenSsh Client porting on Windows 10
-- Connect both the RPi and RDW to your local network
-- Follow [this guide](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md "Setting up a Raspberry Pi headless") 
-to configure your RPi 
-- Install the Maven tool on the RDW
+### 为树莓派配置无界面模式
 
-You should now be able to open a SSH Terminal window on RDW and to remotely login on the RPi board.
-### Install the _raspimaven-archetype_
-- Goto the [Github Pi4J Project](https://github.com/Pi4J/pi4j-maven-archetype "raspimaven-archetype") and download the project
-clicking on the green _Code_ button and selecting _Download ZIP_
-- Unzip the archetype file in an empty folder, let say _my-folder_
+无界面模式可以使树莓派通过 SSH 协议连接 RDW（远程工作站）
+
+步骤：
+- 检查 RDW 是否有 SSH 客户端，如果 RDW 是 Linux 系统，那就已经具备了客户端。
+- 对于 Windows 用户，您可以使用 _putty_、_MobaXterm_ 如果是 Windows 10 系统 可以启用 OpenSsh 客户端
+- 将树莓派和 RDW 同时连接本地局域网
+- 按照 [本指南](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md“设置树莓派无界面模式”)配置您的树莓派
+- 在远程工作站上安装 Maven
+
+您现在应该能够在 RDW 上打开 SSH 终端窗口并远程登录到树莓派。
+
+### 安装 _raspimaven-archetype_
+- 从 [Github Pi4J 项目](https://github.com/Pi4J/pi4j-maven-archetype "raspimaven-archetype") 下载项目，点击绿色的 _Code_ 按钮，选择 _Download ZIP_
+- 解压下载的文件到一个空的文件夹（这里是 my-folder）
 - `cd my-folder/raspimaven-archetype`
 - `mvn install`
+_恭喜！- 你已经生成了你的第一个项目**模板**_
 
-_Congratulation ! - Now you are ready to generate your first **Project Template**_
-
-### Generate a new Project Template
-Let suppose you want to begin the new wonderful PI4J-V2 project _my-project_, to do this follow these steps:
+### 生成新的项目模板
+假设您要开始新的 PI4J-V2 项目 _my-project_，请按照以下步骤操作：
 - `mkdir my-project`
 - `cd my-project`
 - `mvn archetype:generate -DarchetypeCatalog=local`
-- answer to the questions the archetype asks you (see below for details)
-### Configuring your new project
-Before starting the new project generation, the archetype asks some configuration data. The list of question
-and the replies are shown here below:
-1. _Choose archetype:_ **select the _raspimaven-archetype_ from the list proposed**
-1. _Define value for property 'groupId':_ **choose the Maven groupId for your project.** (If don't know what is a groupId, don't worry, just type _"com.example"_ for now)
-1. _Define value for property 'artifactId':_ **choose a name for the program executable your project will produce**
-1. _Define value for property 'version':  1.0-SNAPSHOT:_ **type Enter to accept the default value shown, or type the initial program version, something like _1.0.0_**
-1. _Define value for property 'package':  com.example:_ **type Enter to accept the default value shown**
+- 回答命令放纵原型问你的问题（详情见下文）
 
-The archetype now shows you a summary of the configuration parameters you have just typed in, plus the values proposed for the _main-class_ and _package_ parameters.
-If the list is ok for you, reply _Y_ to accept, otherwise reply _N_ to change one or more values (you will have to re-type all parameter values ...)
 
-After the list confirmation, the archetype generates a new maven project template for you. 
+### 配置新项目
 
-**Congratulations** 
+在开始新项目生成之前，原型会询问一些配置数据。问题列表和回复如下所示：
 
-You should be able to open the new project with your preferred java IDE. The IDE should be able
-to recognize the project as a valid Maven project.
-### Explore the new project template
-Feel free to explore the new project familiarizing with the folder structure. These are the most important features:
-- The file README.md contains the intruction to configure the connection(s) to your RPi board(s) and the decription of the Maven
-commands to build your project, transfer the executable code to the target RPi, run it and also open a debugger session.
-- The _pom.xml_ file already includes the dependencies needed to compile your program with the JPi4J-V2 libraries.
-- The _platform_ folder contains an example configuration file for connecting to you RPi board. Read the README.md explanation,
-open the _platform/raspberry.properties_ file (or copy it to a new file) and edit it to describe how to connect to your RPi
+1. _选择原型：:_ **从建议的列表中选择 _raspimaven-archetype_**
+2. _定义属性 ’groupId‘ 的值:_**为您的项目选择 Maven groupId。**（如果不知道 groupId 是什么，不用担心，现在只需输入 _"com.example"_）
+3. _定义属性 'artifactId':_ **为您的项目将生成的程序可执行文件定义一个名称**
+4. _定义属性 'version':  1.0-SNAPSHOT:_**键入 Enter 以接受显示的默认值，或者键入初始程序版本，例如 _1.0.0_**
+5. _定义属性 'package':  com.example:_ **键入 Enter 以接受显示的默认值**
 
+原型现在显示您刚刚输入的配置参数的摘要，以及为 _main-class_ 和 _package_ 参数建议的值。
+
+如果列表无误，请回复 _Y_ 以接受配置，否则回复 _N_ 然后更改一个或多个值（您必须重新键入所有参数值...）
+
+
+列表确认后，原型为你生成一个新的maven项目模板。
+
+**恭喜** 
+
+使用你的 Java IDE 开发工具打开这个新项目。 IDE 会将项目识别为有效的 Maven 项目。
+
+### 浏览新的模板项目
+随意探索新项目，熟悉文件夹结构。这些是最重要的功能：
+
+- README.md 文件包含配置信息，还有和树莓派开发板的连接的说明，以及用于构建项目、将可执行代码传输到目标 RPi、运行它并打开调试器的 Maven 命令的描述。
+- _pom.xml_ 文件已经包含使用 JPi4J-V2 库所需的依赖。
+- _platform_ 文件夹包含用于连接到树莓派板的示例配置文件，阅读 README.md 说明，打开 _platform/raspberry.properties_ 文件（或将其复制到一个新文件）来配置连接到您的 RPi 的参数 

@@ -13,29 +13,20 @@ weight: 35
 
 ### 电源和地
 
-5V 和 3.3V 均可用作电源引脚，接地引脚也是电源引脚。每当电路板通电时，您的组件都可以使用固定电源。您必须考虑不要连接需要大量电流的设备，否则 Raspberry Pi 本身将无法按预期运行并重启。
+5V 和 3.3V 均可用作电源引脚，接地引脚也是电源引脚。当电路板通电以后，外围组件都可以使用引脚提供的电源。但是不能连接电流大的设备，否则 Raspberry Pi 将没法正常运行，并且会将系统重启。
 
-Both 5V and 3.3V are available as power pins and, of course, also ground pins. Anytime the board is powered you have a fixed power supply available for your components. You have to take into account not to connect devices that need a lot of current, otherwise the Raspberry Pi itself will not behave as expected and reboot for instance.
+### 数字输入输出接口
 
-### Digital GPIO
+除了电源引脚，其他的都是“通用输入/输出”（GPIO）引脚。这些引脚可以通过软件寻址以用作应用程序的输入或输出。它们使用 3.3V，这意味着输出引脚将设置为 0V（低电平）或 3.3V（高电平），输入引脚将读取 0V 为低电平，3.3V 为高电平。
 
-The other ones are "General-Purpose Input/Output" (GPIO) pins. These pins can be addressed with software to act as input 
-or output for an application. They use 3.3V, meaning an output pin will be set to 0V (low) or 3.3V (high) and an input 
-pin will read 0V as low and 3.3V as high.
+大多数 GPIO 引脚都有一个内部上拉或下拉电阻，可以通过软件启用。
 
-Most of the GPIOs have an internal pull-up or pull-down resistor which can be enabled in software.
+## 概述 
 
-## Overview 
+下图概述了典型 40 引脚接头的引脚和类型。注意使用的不同数字
 
-The following image gives you an overview of the pins and types of a typical 40-pin header. Note the different numbers
-being used:
-
-1. **PIN**: 1 to 40 logical order of the pin
-2. **BCM**: the number to be used in your Java code to specify the GPIO to be used. BCM refers to the "Broadcom SOC channel" number, 
-   which is the numbering inside the chip which is used on the Raspberry Pi. These numbers changed between board versions 
-   as you can see in the previous tables for the 26-pin header type 1 versus 2, and or not sequential.
-3. **WPI**: WiringPi number which was used by V.1 of Pi4J. The WiringPi numbering has a "historical reason". When development 
-   for the very first Raspberry Pi's was ongoing, only 8 pin-numbers were foreseen. But, when the designs further evolved 
-   and more pins were added, the numbering in WiringPi was extended to be able to address the extra pins.
+1. **PIN**：引脚的 1 到 40 个逻辑顺序
+2. **BCM**：Java 代码中用于指定要使用的 GPIO 的数字。 BCM指的是“Broadcom SOC通道”编号，是树莓派上使用的芯片内部编号。这些数字在不同的树莓派版本之间是不同的，例如在早期的板子上 26 号针脚作用不同，或者是顺序不同。
+3. **WPI**：Pi4J 的 V.1 使用的 WiringPi 编号。 WiringPi 编号有“历史原因”。在进行第一个 Raspberry Pi 的开发时，预计只有 8 个引脚编号。随着后来的设计进一步发展，WiringPi 扩展了更多的引脚。
 
 ![Pin header overview](/assets/getting-started/pins/headerpins_in_header.png)

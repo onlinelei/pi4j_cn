@@ -1,27 +1,20 @@
 ---
-title: Java development with VSC
+title: 使用 VSC 进行 Java 开发
 weight: 40
 ---
 
-## Java on the Raspberry Pi
+## 在树莓派上使用 Java 
 
-To use Pi4J V2 you'll need Java 11 or newer. Luckily this version is included in the current version of Raspberry Pi OS. 
-In the release notes you can see that the version of 2019-06-20 includes OpenJDK Java 11:
+Pi4J V2 需要在 Java 11 或更新版本下运行。幸运的是，在 2019-06-20 发布的树莓派系统中，已经包含了 OpenJDK Java 11，可以在发行说明中看到：
 
 ```
 2019-06-20:
 Based on Debian Buster
 Oracle Java 7 and 8 replaced with OpenJDK 11
 ```
+但是需要注意的是这个版本**仅与 ARMv7 或更高版本兼容**并且不支持所有 Raspberry Pi 开发板。如果您有 Raspberry Pi A（版本 3）、B（版本 2 或更高版本）或 Compute（版本 3 或更高版本），那么您就可以开始使用了！对于其他开发板，可以在需要在 ["Java for ARMv6/7/8"](/documentation/java-installation/) 中找到响应的帮助。
 
-But you will need to keep in mind this version is **only compatible with ARMv7 or higher** and doesn't support all 
-Raspberry Pi board versions. If you have a Raspberry Pi A (version 3), B (version 2 or higher), 
-or Compute (version 3 or higher), you are good to go! For all other boards you will need some additional steps 
-that are described on ["Java for ARMv6/7/8"](/documentation/java-installation/).
-
-If you prepared a microSD card with the latest version of Raspberry Pi OS (full version), as described on 
-["Set up a new Raspberry Pi"](/getting-started/set-up-a-new-raspberry-pi/), you can check the installed Java version 
-in the terminal. On a board with ARMv7 or ARMv8 you will get this result:
+如果您准备了一张带有最新版本 Raspberry Pi 系统（完整版）的 microSD 卡，安装步骤在 ["设置新的 Raspberry Pi"](/getting-started/set-up-a-new-raspberry-pi/ )，启动树莓派，可以在终端查看安装的 Java 版本。在带有 ARMv7 或 ARMv8 的板上，您将得到以下结果：
 
 ```
 $ java -version
@@ -30,7 +23,7 @@ OpenJDK Runtime Environment (build 11.0.3+7-post-Raspbian-5)
 OpenJDK Server VM (build 11.0.3+7-post-Raspbian-5, mixed mode)
 ```
 
-If you get an error like below, you'll need to follow the steps described on ["Java for ARMv6/7/8"](/documentation/java-installation/).
+如果出现了下面的错误提示，可以在需要在 ["Java for ARMv6/7/8"](/documentation/java-installation/) 中找到响应的帮助。
 
 ```
 $ java -version
@@ -40,9 +33,7 @@ Server VM is only supported on ARMv7+ VFP
 
 ## Maven
 
-Pi4J is using Maven as build tool, this allows you to compile your code with the required modules into JAR-file thanks 
-to the pom.xml configuration file which you can find in the root of a project. We need to install Maven and can do this
-with a single command, after which we can immediately check the installation by requesting the version:
+Pi4J 使用 Maven 作为构建工具，Maven 工具通过项目根目录的 pom.xml 配置文件，可以将所需模块的代码编译为 JAR 文件。安装完 Maven 后可以使用打个命令完成此操作，通过以下的命令来安装 Maven，以及查看 Maven 版本 :
 
 ```
 $ sudo apt install maven
@@ -53,10 +44,7 @@ Maven home: /usr/share/maven
 
 ## Visual Studio Code
 
-Visual Studio Code (VSC) is the free IDE (Integrated Developer Environment) by Microsoft. It's designed as a universal
-tool that you can use for multiple programming languages with extensions. On your Raspberry Pi open a web browser,
-go to the ["VSC Download page (code.visualstudio.com/Download)"](https://code.visualstudio.com/Download) and 
-select the "Linux .deb ARM" version.
+Visual Studio Code (VSC) 是 Microsoft 提供的免费 IDE（集成开发人员环境）。它被设计为一种通用工具，您可以安装插件，使其支持多种编程语言。在您的 Raspberry Pi 上打开 Web 浏览器，跳转到 ["VSC 下载页面 (code.visualstudio.com/Download)"](https://code.visualstudio.com/Download) 选择“Linux .deb ARM”版本。
 
 {{< gallery >}}
 {{< figure link="/assets/getting-started/vsc/visualstudiocode-download.png" caption="Download page for VSC" caption-position="center" caption-effect="fade" >}}
@@ -65,15 +53,14 @@ select the "Linux .deb ARM" version.
 {{< /gallery >}}
 {{< load-photoswipe >}}
 
-When the download is finished, open a terminal, go to the Download directory and install the downloaded deb-file like this:
+下载完成过后，打开 terminal，进入到 Download 文件夹，通过下面的命令进行安装：
 
 ```
 $ cd /home/pi/Downloads
 $ sudo apt install ./code_1.53.0-1612367698_armhf.deb 
 ```
 
-Since 02/2021 there is even an easier way, as Visual Studio Code is now available as a Raspberry Pi OS apt package. 
-Use the following commands:
+自 2021 年 2 月起，还有一种更简单的方法，因为 Visual Studio Code 现在可作为 Raspberry Pi OS apt 包使用。使用以下命令进行安装：
 
 ```
 $ sudo apt update

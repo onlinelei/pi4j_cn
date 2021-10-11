@@ -1,38 +1,28 @@
 ---
-title: Developing on a remote PC
+title: 在远程 PC 上进行开发
 weight: 45
 ---
 
 {{% notice note %}}
-GITHUB PROJECT: [https://github.com/Pi4J/pi4j-maven-archetype](https://github.com/Pi4J/pi4j-maven-archetype)
+GITHUB 项目: [https://github.com/Pi4J/pi4j-maven-archetype](https://github.com/Pi4J/pi4j-maven-archetype)
 {{% /notice %}}
 
-## Developing Java programs using a remote PC workstation
+## 使用远程 PC 工作站开发 Java 程序
 
-Writing your Java program, compiling and running it directly on the Raspberry Pi board
-as shown in the previous chapter is perfectly fine, of course,
-but there is an alternative way to arrange your developing laboratory, using a normal 
-desktop computer as Remote Developing Workstation (RDW).
+直接在 Raspberry Pi 板上编写您的 Java 程序，编译并运行它，像前一章说的那样，完全没问题。我们还可以使用普通台式计算机作为远程开发工作站（RDW）。
 
-This [Maven Archetype](https://github.com/Pi4J/pi4j-maven-archetype "raspimaven-archetype") will give you
-a tool to generate Pi4J-V2 skeleton Java projects. You can use it for your next Pi4j project and you will be able 
-to develop your program on the remote workstation (RDW), compile them, transmit the executable 
-code on the target Pi board and run it. You can also start a remote debugging session.
+这个 [Maven Archetype]（https://github.com/Pi4J/pi4j-maven-archetype "raspimaven-archetype"）会给你一个工具来生成Pi4J-V2骨架Java项目。你可以将它用于你的下一个 Pi4j 项目，你可以在远程工作站 (RDW) 上开发你的程序，编译它们，在目标 Pi 板上传输可执行代码并运行它。同样还可以启动远程调试。
 
-There are some pros. and cons. in such a developing arrangement:
+使用这样的开发模式，会有一些优点和缺点：
 
-- Pros:
-    - Your RDW has much more resources like memory, disk capacity and CPU power
-than a Raspberry Pi, and this is true for a P4 model too. You can store all your programs in the
-desktop computer.
-    - You do not have to install on the Raspberry Pi the Visual Studio Code (or your preferred IDE program),
-the Java JDK (JRE it is enough), Maven and the other development tools.
-    You do not need to connect the screen, the keyboard and the mouse to the Raspberry Pi
-    - You can use smaller PI models
-- Cons:
-    - You can't run Web applications (using a web container like Tomcat or similar)
+- 优点：
+    - 与 Raspberry Pi 相比，您的 RDW 拥有更强的能力，例如内存、磁盘容量和 CPU 功率，这对于 P4 型号也是如此。您可以将所有程序存储在台式计算机中。
+    - 您不必在 Raspberry Pi 上安装 Visual Studio Code（或者其他的 IDE 程序）、不用安装 Java JDK（JRE 就足够了）、以及 Maven 和其他开发工具。而且不需要将屏幕、键盘和鼠标连接到 Raspberry Pi
+    - 可以使用小的 PI 型号
+- 缺点：
+    - 你不能运行 Web 项目（使用 web 容器，例如 Tomcat 或者 similar）
 
-## Setting up
+## 设置
 ### Configure the RPi for Headless mode
 The _Headless Mode_ configuration enables the RPi board to communicate with the RDW over SSH protocol.
 These are the needed steps:

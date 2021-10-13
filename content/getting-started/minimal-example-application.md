@@ -1,17 +1,23 @@
 ---
-title: Minimal example application
+title: 最小示例程序
 weight: 50
 tags: ["Digital Input", "Digital Output"]
 ---
 
 {{% notice note %}}
-GITHUB PROJECT: [https://github.com/Pi4J/pi4j-example-minimal](https://github.com/Pi4J/pi4j-example-minimal)
+GITHUB 项目地址： [https://github.com/Pi4J/pi4j-example-minimal](https://github.com/Pi4J/pi4j-example-minimal)
 {{% /notice %}}
 
-In the ["pi4j-example-minimal" GitHub project](https://github.com/Pi4J/pi4j-example-minimal) you can 
-find a project which contains the minimal code to control a digital input and output with Pi4J. The project is further 
-described on this page. The application will toggle an LED on/off and each time you press the button, the toggling 
-speed increases. When you have pushed the button 5 times, the application stops.
+在 ["pi4j-example-minimal" GitHub 项目](https://github.com/Pi4J/pi4j-example-minimal) 中，您可以找到一个项目，其中包含使用 Pi4J 控制数字输入和输出的最少代码。本页进一步描述了该项目。该应用程序将打开/关闭 LED，每次按下按钮时，切换速度都会增加。当您按下按钮 5 次时，应用程序将停止。
+
+
+
+
+
+
+
+
+In the ["pi4j-example-minimal" GitHub project](https://github.com/Pi4J/pi4j-example-minimal) you can find a project which contains the minimal code to control a digital input and output with Pi4J. The project is further described on this page. The application will toggle an LED on/off and each time you press the button, the toggling speed increases. When you have pushed the button 5 times, the application stops.
 
 {{< vimeo 525570174 >}}
 
@@ -67,8 +73,8 @@ In this project we will be using slf4 for logging, pi4j-core and the pi4j-plugin
     <slf4j.version>1.7.32</slf4j.version>
     <pi4j.version>2.0</pi4j.version>
 </properties>
-``` 
-  
+```
+
 These are the dependencies we need:
 
 ```xml
@@ -103,7 +109,7 @@ These are the dependencies we need:
         <version>${pi4j.version}</version>
     </dependency>
 </dependencies>
-``` 
+```
 
 ## Pi4J code blocks which are used
 
@@ -189,7 +195,7 @@ Before the application quits, we need to call the 'shutdown()' function on the P
 
 ```java
 pi4j.shutdown();
-``` 
+```
 
 ## Steps to run this application on your Raspberry Pi
 
@@ -201,7 +207,7 @@ $ java -version
 openjdk version "11.0.6" 2020-01-14
 OpenJDK Runtime Environment (build 11.0.6+10-post-Raspbian-1deb10u1)
 OpenJDK Server VM (build 11.0.6+10-post-Raspbian-1deb10u1, mixed mode)
-``` 
+```
 
 * Download the project from GitHub and build it:
 
@@ -209,7 +215,7 @@ OpenJDK Server VM (build 11.0.6+10-post-Raspbian-1deb10u1, mixed mode)
 $ git clone https://github.com/Pi4J/pi4j-example-minimal.git
 $ cd pi4j-example-minimal/
 $ mvn clean package
-``` 
+```
 
 * Change to the distribution directory where you can find the generated package and required Java-modules. Start it with the provided run.sh script:
 
@@ -226,7 +232,7 @@ total 644
 -rw-r--r-- 1 pi pi  52173 Jun 19 10:04 slf4j-api-2.0.0-alpha0.jar
 -rw-r--r-- 1 pi pi  15372 Jun 19 10:04 slf4j-simple-2.0.0-alpha0.jar
 $ sudo ./run.sh
-``` 
+```
 
 * The output will first show you some info about the platforms and providers. Then the LED starts blinking and shows how much times you pushed the button:
 
@@ -253,4 +259,4 @@ LED high
 LED low
 LED high
 Button was pressed for the 5th time
-``` 
+```

@@ -4,7 +4,7 @@ weight: 45
 ---
 
 {{% notice note %}}
-GITHUB 项目: [https://github.com/Pi4J/pi4j-maven-archetype](https://github.com/Pi4J/pi4j-maven-archetype)
+GITHUB 项目地址： [https://github.com/Pi4J/pi4j-maven-archetype](https://github.com/Pi4J/pi4j-maven-archetype)
 {{% /notice %}}
 
 ## 使用远程 PC 工作站开发 Java 程序
@@ -77,4 +77,4 @@ _恭喜！- 你已经生成了你的第一个项目**模板**_
 
 - README.md 文件包含配置信息，还有和树莓派开发板的连接的说明，以及用于构建项目、将可执行代码传输到目标 RPi、运行它并打开调试器的 Maven 命令的描述。
 - _pom.xml_ 文件已经包含使用 JPi4J-V2 库所需的依赖。
-- _platform_ 文件夹包含用于连接到树莓派板的示例配置文件，阅读 README.md 说明，打开 _platform/raspberry.properties_ 文件（或将其复制到一个新文件）来配置连接到您的 RPi 的参数 
+- _platform_ 文件夹包含用于连接到树莓派板的示例配置文件，阅读 README.md 说明，打开 _platform/raspberry.properties_ 文件（或者备份后）来配置连接到您的 RPi 的参数 

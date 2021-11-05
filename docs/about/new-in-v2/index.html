@@ -1,20 +1,2842 @@
-<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.80.0"><meta name=description content="Java IO Library for the Raspberry Pi"><meta name=author content="Pi4J"><link rel=icon href=/assets/favicon.ico type=image/ico><title>What's New (V.2) - Pi4J</title><link href=/css/nucleus.css?1631558800 rel=stylesheet><link href=/css/fontawesome-all.min.css?1631558800 rel=stylesheet><link href=/css/hybrid.css?1631558800 rel=stylesheet><link href=/css/featherlight.min.css?1631558800 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1631558800 rel=stylesheet><link href=/css/auto-complete.css?1631558800 rel=stylesheet><link href=/css/atom-one-dark-reasonable.css?1631558800 rel=stylesheet><link href=/css/theme.css?1631558800 rel=stylesheet><link href=/css/hugo-theme.css?1631558800 rel=stylesheet><link href=/css/theme-blue.css?1631558800 rel=stylesheet><script src=/js/jquery-3.3.1.min.js?1631558800></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/about/new-in-v2/><nav id=sidebar><div id=header-wrapper><div id=header><a id=logo href=/><img src=/assets/pi4j-logo.png></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label><input data-search-input id=search-by type=search placeholder=Search...>
-<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/js/lunr.min.js?1631558800></script><script type=text/javascript src=/js/auto-complete.js?1631558800></script><script type=text/javascript>var baseurl="https:\/\/pi4j.com\/";</script><script type=text/javascript src=/js/search.js?1631558800></script></div><section id=homelinks><ul><li><a class=padding href=/><i class="fas fa-home"></i>Home</a></li></ul></section><div class=highlightable><ul class=topics><li data-nav-id=/about/ title=About class="dd-item
-parent"><a href=/about/>About</a><ul><li data-nav-id=/about/previous-version-v1/ title="Previous versions (V.1)" class=dd-item><a href=/about/previous-version-v1/>Previous versions (V.1)</a></li><li data-nav-id=/about/new-in-v2/ title="What's New (V.2)" class="dd-item active"><a href=/about/new-in-v2/>What's New (V.2)</a></li><li data-nav-id=/about/release-notes/ title="Release Notes" class=dd-item><a href=/about/release-notes/>Release Notes</a></li><li data-nav-id=/about/license/ title="License (Open Source)" class=dd-item><a href=/about/license/>License (Open Source)</a></li><li data-nav-id=/about/team/ title="The Team" class=dd-item><a href=/about/team/>The Team</a></li></ul></li><li data-nav-id=/getting-started/ title="Getting started with Pi4J" class=dd-item><a href=/getting-started/>Getting started with Pi4J</a><ul><li data-nav-id=/getting-started/set-up-a-new-raspberry-pi/ title="Set up a new Raspberry Pi" class=dd-item><a href=/getting-started/set-up-a-new-raspberry-pi/>Set up a new Raspberry Pi</a></li><li data-nav-id=/getting-started/understanding-the-pins/ title="Understanding the GPIO pins" class=dd-item><a href=/getting-started/understanding-the-pins/>Understanding the GPIO pins</a></li><li data-nav-id=/getting-started/java-development-on-the-raspberry-pi-with-vsc/ title="Java development with VSC" class=dd-item><a href=/getting-started/java-development-on-the-raspberry-pi-with-vsc/>Java development with VSC</a></li><li data-nav-id=/getting-started/developing-on-a-remote-pc/ title="Developing on a remote PC" class=dd-item><a href=/getting-started/developing-on-a-remote-pc/>Developing on a remote PC</a></li><li data-nav-id=/getting-started/minimal-example-application/ title="Minimal example application" class=dd-item><a href=/getting-started/minimal-example-application/>Minimal example application</a></li><li data-nav-id=/getting-started/crowpi/ title="Electronics with CrowPi" class=dd-item><a href=/getting-started/crowpi/>Electronics with CrowPi</a><ul><li data-nav-id=/getting-started/crowpi/crowpi-os/ title="CrowPi OS" class=dd-item><a href=/getting-started/crowpi/crowpi-os/>CrowPi OS</a></li><li data-nav-id=/getting-started/crowpi/develop-with-intellij/ title="Develop with Intellij IDEA" class=dd-item><a href=/getting-started/crowpi/develop-with-intellij/>Develop with Intellij IDEA</a></li></ul></li><li data-nav-id=/getting-started/user-interface-with-javafx/ title="User interface with JavaFX" class=dd-item><a href=/getting-started/user-interface-with-javafx/>User interface with JavaFX</a></li><li data-nav-id=/getting-started/fxgl/ title="Game development with FXGL" class=dd-item><a href=/getting-started/fxgl/>Game development with FXGL</a><ul><li data-nav-id=/getting-started/fxgl/fxgl-to-picade/ title="FXGl to Picade" class=dd-item><a href=/getting-started/fxgl/fxgl-to-picade/>FXGl to Picade</a></li><li data-nav-id=/getting-started/fxgl/kiosk-mode/ title="JavaFX kiosk mode" class=dd-item><a href=/getting-started/fxgl/kiosk-mode/>JavaFX kiosk mode</a></li></ul></li><li data-nav-id=/getting-started/learn-more/ title="Learn more..." class=dd-item><a href=/getting-started/learn-more/>Learn more...</a></li></ul></li><li data-nav-id=/documentation/ title=Documentation class=dd-item><a href=/documentation/>Documentation</a><ul><li data-nav-id=/documentation/pin-numbering/ title="Pin numbering" class=dd-item><a href=/documentation/pin-numbering/>Pin numbering</a></li><li data-nav-id=/documentation/java-installation/ title="Java for ARMv6/7/8" class=dd-item><a href=/documentation/java-installation/>Java for ARMv6/7/8</a></li><li data-nav-id=/documentation/logging/ title="Logging with SLF4J" class=dd-item><a href=/documentation/logging/>Logging with SLF4J</a></li><li data-nav-id=/documentation/create-context/ title="Creating a Pi4J Context" class=dd-item><a href=/documentation/create-context/>Creating a Pi4J Context</a></li><li data-nav-id=/documentation/platforms/ title="Choosing a Platform" class=dd-item><a href=/documentation/platforms/>Choosing a Platform</a><ul><li data-nav-id=/documentation/platforms/raspberry-pi/ title="Raspberry Pi" class=dd-item><a href=/documentation/platforms/raspberry-pi/>Raspberry Pi</a></li></ul></li><li data-nav-id=/documentation/providers/ title="Choosing an I/O Provider" class=dd-item><a href=/documentation/providers/>Choosing an I/O Provider</a><ul><li data-nav-id=/documentation/providers/linuxfs/ title=LinuxFS class=dd-item><a href=/documentation/providers/linuxfs/>LinuxFS</a></li><li data-nav-id=/documentation/providers/pigpio/ title=PiGpio class=dd-item><a href=/documentation/providers/pigpio/>PiGpio</a></li></ul></li><li data-nav-id=/documentation/build-io/ title="Building an I/O Instance" class=dd-item><a href=/documentation/build-io/>Building an I/O Instance</a></li><li data-nav-id=/documentation/io-examples/ title="I/O Examples" class=dd-item><a href=/documentation/io-examples/>I/O Examples</a><ul><li data-nav-id=/documentation/io-examples/digital-output/ title="Digital Output (GPIO)" class=dd-item><a href=/documentation/io-examples/digital-output/>Digital Output (GPIO)</a></li><li data-nav-id=/documentation/io-examples/digital-input/ title="Digital Input (GPIO)" class=dd-item><a href=/documentation/io-examples/digital-input/>Digital Input (GPIO)</a></li><li data-nav-id=/documentation/io-examples/pwm/ title="Pulse Width Modulation (PWM)" class=dd-item><a href=/documentation/io-examples/pwm/>Pulse Width Modulation (PWM)</a></li><li data-nav-id=/documentation/io-examples/i2c/ title="Inter-Integrated Circuit (I²C)" class=dd-item><a href=/documentation/io-examples/i2c/>Inter-Integrated Circuit (I²C)</a><ul><li data-nav-id=/documentation/io-examples/i2c/clock-stretching/ title="I²C Clock Stretching" class=dd-item><a href=/documentation/io-examples/i2c/clock-stretching/>I²C Clock Stretching</a></li></ul></li><li data-nav-id=/documentation/io-examples/spi/ title="Serial Peripheral Interface (SPI)" class=dd-item><a href=/documentation/io-examples/spi/>Serial Peripheral Interface (SPI)</a></li><li data-nav-id=/documentation/io-examples/serial/ title="Serial (UART/RS232)" class=dd-item><a href=/documentation/io-examples/serial/>Serial (UART/RS232)</a></li></ul></li><li data-nav-id=/documentation/device-examples/ title="Devices examples" class=dd-item><a href=/documentation/device-examples/>Devices examples</a></li><li data-nav-id=/documentation/registry/ title="I/O Registry" class=dd-item><a href=/documentation/registry/>I/O Registry</a></li><li data-nav-id=/documentation/shutdown/ title="Shutting down the Pi4J Context" class=dd-item><a href=/documentation/shutdown/>Shutting down the Pi4J Context</a></li></ul></li><li data-nav-id=/architecture/ title=Architecture/Design class=dd-item><a href=/architecture/>Architecture/Design</a><ul><li data-nav-id=/architecture/about-the-code/ title="Project source structure" class=dd-item><a href=/architecture/about-the-code/>Project source structure</a><ul><li data-nav-id=/architecture/about-the-code/download/ title=Download/Install class=dd-item><a href=/architecture/about-the-code/download/>Download/Install</a><ul><li data-nav-id=/architecture/about-the-code/download/direct-download/ title="Direct Download" class=dd-item><a href=/architecture/about-the-code/download/direct-download/>Direct Download</a></li><li data-nav-id=/architecture/about-the-code/download/repository/ title="Maven Repository" class=dd-item><a href=/architecture/about-the-code/download/repository/>Maven Repository</a></li><li data-nav-id=/architecture/about-the-code/download/install/ title=Installation class=dd-item><a href=/architecture/about-the-code/download/install/>Installation</a></li></ul></li><li data-nav-id=/architecture/about-the-code/build-instructions/ title="Build Instructions" class=dd-item><a href=/architecture/about-the-code/build-instructions/>Build Instructions</a></li><li data-nav-id=/architecture/about-the-code/maven-settings/ title="Maven settings" class=dd-item><a href=/architecture/about-the-code/maven-settings/>Maven settings</a></li><li data-nav-id=/architecture/about-the-code/code-styling/ title="Code styling" class=dd-item><a href=/architecture/about-the-code/code-styling/>Code styling</a></li><li data-nav-id=/architecture/about-the-code/hardware-testing/ title="Hardware testing" class=dd-item><a href=/architecture/about-the-code/hardware-testing/>Hardware testing</a></li></ul></li><li data-nav-id=/architecture/advanced/ title=Advanced class=dd-item><a href=/architecture/advanced/>Advanced</a><ul><li data-nav-id=/architecture/advanced/annotated-provisioning/ title="Annotated provisioning" class=dd-item><a href=/architecture/advanced/annotated-provisioning/>Annotated provisioning</a></li><li data-nav-id=/architecture/advanced/dependency-injection/ title="Dependency injection" class=dd-item><a href=/architecture/advanced/dependency-injection/>Dependency injection</a></li><li data-nav-id=/architecture/advanced/library-path/ title="Native Library Path" class=dd-item><a href=/architecture/advanced/library-path/>Native Library Path</a></li><li data-nav-id=/architecture/advanced/plugins/ title=Plug-ins class=dd-item><a href=/architecture/advanced/plugins/>Plug-ins</a></li><li data-nav-id=/architecture/advanced/remote-support/ title="Remote support" class=dd-item><a href=/architecture/advanced/remote-support/>Remote support</a></li><li data-nav-id=/architecture/advanced/3rd-party/ title="Third-Party Integration" class=dd-item><a href=/architecture/advanced/3rd-party/>Third-Party Integration</a></li></ul></li></ul></li><li data-nav-id=/featured-projects/ title="Featured Projects" class=dd-item><a href=/featured-projects/>Featured Projects</a><ul><li data-nav-id=/featured-projects/soft-real-time-plc-written-in-strolch/ title="Soft real time PLC with Strolch" class=dd-item><a href=/featured-projects/soft-real-time-plc-written-in-strolch/>Soft real time PLC with Strolch</a></li><li data-nav-id=/featured-projects/pijukebox-by-daniel-martensson/ title="PiJukeBox by Daniel Mårtensson" class=dd-item><a href=/featured-projects/pijukebox-by-daniel-martensson/>PiJukeBox by Daniel Mårtensson</a></li></ul></li></ul><section id=shortcuts><h3>More</h3><ul><li><a class=padding href=https://pi4j.com/tags><i class="fas fa-tags"></i>Tags</a></li><li><a class=padding href=https://github.com/Pi4J><i class="fab fa-github"></i>GitHub project</a></li><li><a class=padding href=https://twitter.com/pi4J><i class="fab fa-twitter"></i>Twitter @pi4j</a></li><li><a class=padding href=https://github.com/Pi4J/pi4j-v2/discussions><i class="fab fa-github"></i>Pi4J Forum</a></li></ul></section><section id=footer><p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a>from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=top-github-link><a class=github-link title="Edit this page" href=https://github.com/Pi4J/pi4j.github.io/blob/main/content/about/new-in-v2.md target=blank><i class="fas fa-code-branch"></i><span id=top-github-link-text>Edit this page</span></a></div><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span><span class=links><a href=/>Welcome to Pi4J</a> > <a href=/about/>About</a> > What's New (V.2)</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><a href=#whats-new-in-20>What&rsquo;s New in 2.0?</a></li><li><a href=#what-are-the-differences-compared-to-v1>What are the differences compared to V.1?</a></li><li><a href=#sources>Sources</a></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>What's New (V.2)</h1><h2 id=whats-new-in-20>What&rsquo;s New in 2.0?</h2><p>Pi4J version 2.0 brings with it many new features, and an entirely new architecture that focuses on
-extensibility, simplified integration and a modern Java API including the following:</p><ul><li>Fluent APIs/Interfaces</li><li>Immutable Runtime Context</li><li>Extensible Provider/Platform/Plug-in Architecture</li><li>Builder-patterns for creating new I/O instances</li><li>Well-documented source code</li><li>Hardware PWM Support</li><li>Java 11</li></ul><p>Future plans:</p><ul><li>Dependency Injection via Pi4J Annotations</li><li>Remote I/O Support (via TCP/IP)</li></ul><p>In addition to the features listed above, Pi4J version 2.0 also abandons the old WiringPi pin numbering scheme in favor
-of the more traditional and commonly used Broadcom pin numbering scheme. This pin numbering scheme has been a source of
-confusion for a number of years, especially with beginners and is somewhat cumbersome to maintain as new Raspberry Pi
-models are introduces with differing or added GPIO pins. Moving forward, Pi4J will only use the Broadcom (BCM) pin
-numbering scheme.</p><p>The WiringPi project has now been deprecated (see <a href=http://wiringpi.com/wiringpi-deprecated/>wiringpi.com/wiringpi-deprecated/</a>).
-Pi4J version 2.0 will no longer be based on WiringPi and has moved to using the PIGPIO library
-(<a href=http://abyz.me.uk/rpi/pigpio/>http://abyz.me.uk/rpi/pigpio/</a>) internally for low level integation.
-With this move, we will also support the remote I/O features (via TCP socket) offered by the PIGPIO daemon
-(<a href=http://abyz.me.uk/rpi/pigpio/pigpiod.html>http://abyz.me.uk/rpi/pigpio/pigpiod.html</a>).</p><h2 id=what-are-the-differences-compared-to-v1>What are the differences compared to V.1?</h2><p>Starting with the Pi4J 2.0 builds, the Pi4J project is prioritizing focus on providing Java programs access,
-control and communication with the core I/O capabilities of the Raspberry Pi platform. Earlier versions of Pi4J were
-perhaps too ambitious in scope and that led to significant project bloat to the point that the project was becoming
-unsustainable. The goal moving forward is to limit scope to that of the raw I/O capabilities of the Raspberry Pi
-platform and provide timely updates and releases for bug fixed and new RaspberryPi model introductions. Reducing
-the scope of the project should better serve the Java community for basic I/O access by reducing complexity.</p><p>The following features have been removed from the Pi4J library:</p><ul><li><strong>IO Expanders</strong> &ndash; IO expansion is still supported but concrete implementations should be provided outside the core Pi4J core project such that they can be maintained and extended independently.</li><li><strong>Other Platforms</strong> &ndash; Other platforms such as Odroid, BananaPi, NanoPi, OrangePi, etc. have been removed and will no longer be supported. The challenge with supporting these additional platforms is that Pi4J depends on the underlying WiringPi project and WiringPi ports for these other platforms is not well supported by the various SoC vendors or community. The various WiringPi ports for these other platforms are also inconsistent causing inconsistent features and functionality of Pi4J. Additionally, regression testing of bug fixes and new features in Pi4J is compounded with each additional supported platform.</li><li><strong>Components & Devices</strong> &ndash; Pi4J originally provided higher level interfaces for components and devices that provided an abstraction layer between real world devices (things) and lower-level I/O interfaces. While a noble goal, unfortunately this part of the project never received the attention and time that it deserved and never gained much adoption by the community. We are removing these to allow Pi4J to focus solely on the raw I/O supported by the Raspberry Pi platform.</li></ul><h2 id=sources>Sources</h2><p>The Pi4J V.2 source code is available in this GitHub repository: <a href=https://github.com/Pi4J/pi4j-v2>Pi4J V.2 GitHub Repository</a></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>git clone https://github.com/Pi4J/pi4j-v2
-</code></pre></div><p>Pi4J V.2 had the first release in August 2021. Rework from V.1 to V.2 took quit some time and will never be finished, but
-we are confident this is a great library to develop Java application on the Raspberry Pi. Any remarks and contributions
-are welcome as either bug reports or discussions in the <a href=https://github.com/Pi4J/pi4j-v2>GitHub repository</a>.</p><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=/about/previous-version-v1/ title="Previous versions (V.1)"><i class="fa fa-chevron-left"></i></a><a class="nav nav-next" href=/about/release-notes/ title="Release Notes" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1631558800></script><script src=/js/perfect-scrollbar.min.js?1631558800></script><script src=/js/perfect-scrollbar.jquery.min.js?1631558800></script><script src=/js/jquery.sticky.js?1631558800></script><script src=/js/featherlight.min.js?1631558800></script><script src=/js/highlight.pack.js?1631558800></script><script>hljs.initHighlightingOnLoad();</script><script src=/js/modernizr.custom-3.6.0.js?1631558800></script><script src=/js/learn.js?1631558800></script><script src=/js/hugo-learn.js?1631558800></script><script src=/mermaid/mermaid.js?1631558800></script><script>mermaid.initialize({startOnLoad:true});</script></body></html>
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="description" content="Java IO Library for the Raspberry Pi">
+<meta name="author" content="Pi4J">
+
+    <link rel="icon" href="/assets/favicon.ico" type="image/ico">
+
+    <title>新特性 (V.2)  -  Pi4J</title>
+
+    
+    <link href="/css/nucleus.css?1636117408" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1636117408" rel="stylesheet">
+    <link href="/css/hybrid.css?1636117408" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1636117408" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1636117408" rel="stylesheet">
+    <link href="/css/auto-complete.css?1636117408" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1636117408" rel="stylesheet">
+    <link href="/css/theme.css?1636117408" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1636117408" rel="stylesheet">
+    
+    <link href="/css/theme-blue.css?1636117408" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1636117408"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/about/new-in-v2/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href='/'>
+  <img src="/assets/pi4j-logo.png" />
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1636117408"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1636117408"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/pi4j.com\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1636117408"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/about/" title="关于" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/about/">
+          关于
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/about/previous-version-v1/" title="早期版本 (V.1)" class="dd-item ">
+        <a href="/about/previous-version-v1/">
+        早期版本 (V.1)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/about/new-in-v2/" title="新特性 (V.2)" class="dd-item active">
+        <a href="/about/new-in-v2/">
+        新特性 (V.2)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/about/release-notes/" title="发行说明" class="dd-item ">
+        <a href="/about/release-notes/">
+        发行说明
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/about/license/" title="开源证书" class="dd-item ">
+        <a href="/about/license/">
+        开源证书
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/about/team/" title="团队" class="dd-item ">
+        <a href="/about/team/">
+        团队
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/getting-started/" title="Pi4J 入门" class="dd-item
+        
+        
+        
+        ">
+      <a href="/getting-started/">
+          Pi4J 入门
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/set-up-a-new-raspberry-pi/" title="设置一个新的树莓派" class="dd-item ">
+        <a href="/getting-started/set-up-a-new-raspberry-pi/">
+        设置一个新的树莓派
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/understanding-the-pins/" title="了解 GPIO 引脚" class="dd-item ">
+        <a href="/getting-started/understanding-the-pins/">
+        了解 GPIO 引脚
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/java-development-on-the-raspberry-pi-with-vsc/" title="使用 VSC 进行 Java 开发" class="dd-item ">
+        <a href="/getting-started/java-development-on-the-raspberry-pi-with-vsc/">
+        使用 VSC 进行 Java 开发
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/developing-on-a-remote-pc/" title="在远程 PC 上进行开发" class="dd-item ">
+        <a href="/getting-started/developing-on-a-remote-pc/">
+        在远程 PC 上进行开发
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/minimal-example-application/" title="最小示例程序" class="dd-item ">
+        <a href="/getting-started/minimal-example-application/">
+        最小示例程序
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/getting-started/crowpi/" title="Electronics with CrowPi" class="dd-item
+        
+        
+        
+        ">
+      <a href="/getting-started/crowpi/">
+          Electronics with CrowPi
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/crowpi/crowpi-os/" title="CrowPi OS" class="dd-item ">
+        <a href="/getting-started/crowpi/crowpi-os/">
+        CrowPi OS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/crowpi/develop-with-intellij/" title="Develop with Intellij IDEA" class="dd-item ">
+        <a href="/getting-started/crowpi/develop-with-intellij/">
+        Develop with Intellij IDEA
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/user-interface-with-javafx/" title="User interface with JavaFX" class="dd-item ">
+        <a href="/getting-started/user-interface-with-javafx/">
+        User interface with JavaFX
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/getting-started/fxgl/" title="Game development with FXGL" class="dd-item
+        
+        
+        
+        ">
+      <a href="/getting-started/fxgl/">
+          Game development with FXGL
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/fxgl/fxgl-to-picade/" title="FXGl to Picade" class="dd-item ">
+        <a href="/getting-started/fxgl/fxgl-to-picade/">
+        FXGl to Picade
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/fxgl/kiosk-mode/" title="JavaFX kiosk mode" class="dd-item ">
+        <a href="/getting-started/fxgl/kiosk-mode/">
+        JavaFX kiosk mode
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/learn-more/" title="Learn more..." class="dd-item ">
+        <a href="/getting-started/learn-more/">
+        Learn more...
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/documentation/" title="Documentation" class="dd-item
+        
+        
+        
+        ">
+      <a href="/documentation/">
+          Documentation
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/documentation/pin-numbering/" title="Pin numbering" class="dd-item ">
+        <a href="/documentation/pin-numbering/">
+        Pin numbering
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/documentation/java-installation/" title="Java for ARMv6/7/8" class="dd-item ">
+        <a href="/documentation/java-installation/">
+        Java for ARMv6/7/8
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/documentation/logging/" title="Logging with SLF4J" class="dd-item ">
+        <a href="/documentation/logging/">
+        Logging with SLF4J
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/documentation/create-context/" title="Creating a Pi4J Context" class="dd-item ">
+        <a href="/documentation/create-context/">
+        Creating a Pi4J Context
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/documentation/platforms/" title="Choosing a Platform" class="dd-item
+        
+        
+        
+        ">
+      <a href="/documentation/platforms/">
+          Choosing a Platform
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/documentation/platforms/raspberry-pi/" title="Raspberry Pi" class="dd-item ">
+        <a href="/documentation/platforms/raspberry-pi/">
+        Raspberry Pi
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/documentation/providers/" title="Choosing an I/O Provider" class="dd-item
+        
+        
+        
+        ">
+      <a href="/documentation/providers/">
+          Choosing an I/O Provider
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/documentation/providers/linuxfs/" title="LinuxFS" class="dd-item ">
+        <a href="/documentation/providers/linuxfs/">
+        LinuxFS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/documentation/providers/pigpio/" title="PiGpio" class="dd-item ">
+        <a href="/documentation/providers/pigpio/">
+        PiGpio
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/documentation/build-io/" title="Building an I/O Instance" class="dd-item ">
+        <a href="/documentation/build-io/">
+        Building an I/O Instance
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/documentation/io-examples/" title="I/O Examples" class="dd-item
+        
+        
+        
+        ">
+      <a href="/documentation/io-examples/">
+          I/O Examples
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/documentation/io-examples/digital-output/" title="Digital Output (GPIO)" class="dd-item ">
+        <a href="/documentation/io-examples/digital-output/">
+        Digital Output (GPIO)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/documentation/io-examples/digital-input/" title="Digital Input (GPIO)" class="dd-item ">
+        <a href="/documentation/io-examples/digital-input/">
+        Digital Input (GPIO)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/documentation/io-examples/pwm/" title="Pulse Width Modulation (PWM)" class="dd-item ">
+        <a href="/documentation/io-examples/pwm/">
+        Pulse Width Modulation (PWM)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/documentation/io-examples/i2c/" title="Inter-Integrated Circuit (I²C)" class="dd-item
+        
+        
+        
+        ">
+      <a href="/documentation/io-examples/i2c/">
+          Inter-Integrated Circuit (I²C)
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/documentation/io-examples/i2c/clock-stretching/" title="I²C Clock Stretching" class="dd-item ">
+        <a href="/documentation/io-examples/i2c/clock-stretching/">
+        I²C Clock Stretching
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/documentation/io-examples/spi/" title="Serial Peripheral Interface (SPI)" class="dd-item ">
+        <a href="/documentation/io-examples/spi/">
+        Serial Peripheral Interface (SPI)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/documentation/io-examples/serial/" title="Serial (UART/RS232)" class="dd-item ">
+        <a href="/documentation/io-examples/serial/">
+        Serial (UART/RS232)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/documentation/device-examples/" title="Devices examples" class="dd-item ">
+        <a href="/documentation/device-examples/">
+        Devices examples
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/documentation/registry/" title="I/O Registry" class="dd-item ">
+        <a href="/documentation/registry/">
+        I/O Registry
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/documentation/shutdown/" title="Shutting down the Pi4J Context" class="dd-item ">
+        <a href="/documentation/shutdown/">
+        Shutting down the Pi4J Context
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/architecture/" title="Architecture/Design" class="dd-item
+        
+        
+        
+        ">
+      <a href="/architecture/">
+          Architecture/Design
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/architecture/about-the-code/" title="Project source structure" class="dd-item
+        
+        
+        
+        ">
+      <a href="/architecture/about-the-code/">
+          Project source structure
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/architecture/about-the-code/download/" title="下载/安装" class="dd-item
+        
+        
+        
+        ">
+      <a href="/architecture/about-the-code/download/">
+          下载/安装
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/architecture/about-the-code/download/direct-download/" title="直接下载" class="dd-item ">
+        <a href="/architecture/about-the-code/download/direct-download/">
+        直接下载
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/architecture/about-the-code/download/repository/" title="Maven 仓库" class="dd-item ">
+        <a href="/architecture/about-the-code/download/repository/">
+        Maven 仓库
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/architecture/about-the-code/download/install/" title="安装" class="dd-item ">
+        <a href="/architecture/about-the-code/download/install/">
+        安装
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/architecture/about-the-code/build-instructions/" title="Build Instructions" class="dd-item ">
+        <a href="/architecture/about-the-code/build-instructions/">
+        Build Instructions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/architecture/about-the-code/maven-settings/" title="Maven settings" class="dd-item ">
+        <a href="/architecture/about-the-code/maven-settings/">
+        Maven settings
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/architecture/about-the-code/code-styling/" title="Code styling" class="dd-item ">
+        <a href="/architecture/about-the-code/code-styling/">
+        Code styling
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/architecture/about-the-code/hardware-testing/" title="Hardware testing" class="dd-item ">
+        <a href="/architecture/about-the-code/hardware-testing/">
+        Hardware testing
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/architecture/advanced/" title="Advanced" class="dd-item
+        
+        
+        
+        ">
+      <a href="/architecture/advanced/">
+          Advanced
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/architecture/advanced/annotated-provisioning/" title="Annotated provisioning" class="dd-item ">
+        <a href="/architecture/advanced/annotated-provisioning/">
+        Annotated provisioning
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/architecture/advanced/dependency-injection/" title="Dependency injection" class="dd-item ">
+        <a href="/architecture/advanced/dependency-injection/">
+        Dependency injection
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/architecture/advanced/library-path/" title="Native Library Path" class="dd-item ">
+        <a href="/architecture/advanced/library-path/">
+        Native Library Path
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/architecture/advanced/plugins/" title="Plug-ins" class="dd-item ">
+        <a href="/architecture/advanced/plugins/">
+        Plug-ins
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/architecture/advanced/remote-support/" title="Remote support" class="dd-item ">
+        <a href="/architecture/advanced/remote-support/">
+        Remote support
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/architecture/advanced/3rd-party/" title="Third-Party Integration" class="dd-item ">
+        <a href="/architecture/advanced/3rd-party/">
+        Third-Party Integration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/featured-projects/" title="Featured Projects" class="dd-item
+        
+        
+        
+        ">
+      <a href="/featured-projects/">
+          Featured Projects
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/featured-projects/soft-real-time-plc-written-in-strolch/" title="Soft real time PLC with Strolch" class="dd-item ">
+        <a href="/featured-projects/soft-real-time-plc-written-in-strolch/">
+        Soft real time PLC with Strolch
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/featured-projects/pijukebox-by-daniel-martensson/" title="PiJukeBox by Daniel Mårtensson" class="dd-item ">
+        <a href="/featured-projects/pijukebox-by-daniel-martensson/">
+        PiJukeBox by Daniel Mårtensson
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://pi4j.com/tags"><i class='fas fa-tags'></i> Tags</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://github.com/Pi4J"><i class='fab fa-github'></i> GitHub project</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://twitter.com/pi4J"><i class='fab fa-twitter'></i> Twitter @pi4j</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://github.com/Pi4J/pi4j-v2/discussions"><i class='fab fa-github'></i> Pi4J Forum</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/Pi4J/pi4j.github.io/blob/main/content/about/new-in-v2.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>欢迎来到 Pi4J</a> > <a href='/about/'>关于</a> > 新特性 (V.2)
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#20-新特性">2.0 新特性</a></li>
+    <li><a href="#和-v1-版本对比有什么不同">和 V.1 版本对比有什么不同</a></li>
+    <li><a href="#源码">源码</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              新特性 (V.2)
+            </h1>
+          
+
+        
+
+
+<h2 id="20-新特性">2.0 新特性</h2>
+<p>Pi4J 2.0 版本带来了许多新功能，以及一个全新的体系结构，它将专注于可扩展性、简化的集成和先进的 Java API，主要有以下内容：</p>
+<ul>
+<li>流畅的 API 接口</li>
+<li>可控的上下文环境</li>
+<li>可扩展的插件架构体系</li>
+<li>用于创建新 I/O 实例的生成器模式</li>
+<li>完善的文档，和源代码</li>
+<li>硬件 PWM 支持</li>
+<li>Java 11</li>
+</ul>
+<p>未来计划：</p>
+<ul>
+<li>通过 Pi4J 注解进行依赖注入</li>
+<li>支持远程 I/O（通过TCP/IP）</li>
+</ul>
+<p>除了上面列出的功能外，Pi4J 2.0 版本还放弃了旧的 WiringPi 引脚编号方案，转而采用更为传统和常用的 Broadcom 引脚编号方案。多年来，这种引脚编号方案一直比较混乱，对于初学者来说经常摸不到头脑。并且由于新的 Raspberry Pi 型号引入了新的 GPIO 引脚，以至于维护起来有些麻烦。今后，Pi4J将只使用 Broadcom（BCM）的引脚编号方案。</p>
+<p>WiringPi 项目现在已经废弃 (详情请查看： <a href="http://wiringpi.com/wiringpi-deprecated/">wiringpi.com/wiringpi-deprecated/</a>)。Pi4J 2.0 版本将不再基于WiringPi，而是在内部使用 PIGPIO (<a href="http://abyz.me.uk/rpi/pigpio/">http://abyz.me.uk/rpi/pigpio/</a>) 库进行底层集成。通过这次迁移，运用 PIGPIO 守护进程，我们还将支持远程 I/O 特性（通过 TCP 连接）</p>
+<h2 id="和-v1-版本对比有什么不同">和 V.1 版本对比有什么不同</h2>
+<p>从 Pi4J 2.0 版本开始构建以来，Pi4J 项目将重点放在了用 Java 程序，控制和访问树莓派平台的核心 I/O 。在 Pi4J 的早期版本中，在项目范围上过于宽泛，导致项目严重膨胀，以至于项目难以维护。现在的目标转移到树莓派底层的 I/O 功能范围内，并将更快的响应 bug 的修复，以及新平台的引入。新的项目范围通过降低访问底层 I/O 复杂性，更好的额服务于 Java 社区。</p>
+<p>下面的一些特性在 Pi4J 库中被移除：</p>
+<ul>
+<li>
+<p><strong>IO 扩展</strong> &ndash; IO 扩展仍然会提供支持，但是会在 Pi4J 核心包之外提供，这样也方便与他们的独立维护和扩展。</p>
+</li>
+<li>
+<p><strong>其他平台</strong> &ndash; 其他的一些平台，例如： Odroid、BananaPi、NanoPi、OrangePi 等已被移除，将不再支持。这些额外平台的挑战在于 Pi4J 依赖于底层的 WiringPi 项目，而这些其他平台的 WiringPi 端口并没有得到各种 SoC 供应商或社区的良好支持。这些其他平台的各种 WiringPi 端口也不一致，导致 Pi4J 的特性和功能表现不一致。而且 Pi4J 项目的，bug 修复和新功能的回归测试，需要在每个平台上测试通过。</p>
+</li>
+<li>
+<p><strong>组件、设备</strong> &ndash; Pi4J 原本为组件和设备提供更高级别的接口，在现实世界的设备和底层的 I/O 接口之间提供抽象层，虽然这是一个崇高的目标，但不幸的是，该项目的这一部分没有得到应有的关注，也没有被社区广泛采用。我们正在删除这些，以便于 Pi4J 能专注于 Raspberry Pi 平台底层 I/O。</p>
+</li>
+</ul>
+<h2 id="源码">源码</h2>
+<p>Pi4J 2.0 版本的源代码 GitHub 地址：<a href="https://github.com/Pi4J/pi4j-v2">Pi4J V.2 GitHub Repository</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/Pi4J/pi4j-v2
+</code></pre></div><p>Pi4J 2.0 版本于 2021 年 8 月首次发布。从 V.1 到 V.2 的返工花费了一些时间并且还在继续，但我们确信这是一个在 Raspberry Pi 上开发 Java 应用程序的好库。欢迎大家在 github 中提出任何评论和bug 或者参与到项目的开发中。</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/about/previous-version-v1/" title="早期版本 (V.1)"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/about/release-notes/" title="发行说明" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1636117408"></script>
+    <script src="/js/perfect-scrollbar.min.js?1636117408"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1636117408"></script>
+    <script src="/js/jquery.sticky.js?1636117408"></script>
+    <script src="/js/featherlight.min.js?1636117408"></script>
+    <script src="/js/highlight.pack.js?1636117408"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1636117408"></script>
+    <script src="/js/learn.js?1636117408"></script>
+    <script src="/js/hugo-learn.js?1636117408"></script>
+    
+        
+            <script src="/mermaid/mermaid.js?1636117408"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

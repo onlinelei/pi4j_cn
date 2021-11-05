@@ -1,9 +1,65 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>About on Pi4J</title><link>https://pi4j.com/about/</link><description>Recent content in About on Pi4J</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://pi4j.com/about/index.xml" rel="self" type="application/rss+xml"/><item><title>Previous versions (V.1)</title><link>https://pi4j.com/about/previous-version-v1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pi4j.com/about/previous-version-v1/</guid><description>Documentation of the 1.X versions Pi4J Version 1.4 Released 2021-03-03 Support for JDK/JRE 11 and 64-bit ARM platforms This release is the final release for the Pi4J Version 1.x codebase The Pi4J project is now prioritizing focus on providing Java programs access, control and communication with the core I/O capabilities of the Raspberry Pi platform Changed project to Apache License, Version 2.0 Removed pi4j-device and pi4j-gpio-extension library Removed platform support for Odroid, BananaPi, BPi, NanoPi, OrangePi Various improvements and bug fixes listed here: GitHub Issues (v1.</description></item><item><title>What's New (V.2)</title><link>https://pi4j.com/about/new-in-v2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pi4j.com/about/new-in-v2/</guid><description>What&amp;rsquo;s New in 2.0? Pi4J version 2.0 brings with it many new features, and an entirely new architecture that focuses on extensibility, simplified integration and a modern Java API including the following:
-Fluent APIs/Interfaces Immutable Runtime Context Extensible Provider/Platform/Plug-in Architecture Builder-patterns for creating new I/O instances Well-documented source code Hardware PWM Support Java 11 Future plans:
-Dependency Injection via Pi4J Annotations Remote I/O Support (via TCP/IP) In addition to the features listed above, Pi4J version 2.</description></item><item><title>Release Notes</title><link>https://pi4j.com/about/release-notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pi4j.com/about/release-notes/</guid><description>2021-08-26 2.0 Yoohoo it&amp;rsquo;s here! After a lot of work we present you the totally renewed Pi4J library!
-Most important info on V2:
-Java 11 and up Breaking change with V1 as the framework has been completely re-architected (see pi4j.com/architecture) No longer include support for peripheral devices and add-on chipsets/boards as part of the core project Easier to extend, maintain and test Uses PiGpio as the native library (WiringPi which was used in V1 got deprecated in 2019) Builds as modules to fully support future evolutions in Java Uses minimal dependencies (only SLF4J) Different examples how to get started (also with JavaFX) are available on pi4j.</description></item><item><title>License (Open Source)</title><link>https://pi4j.com/about/license/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pi4j.com/about/license/</guid><description>The Pi4J Version 2.0 project is distributed and licensed under the Apache License, Version 2.0 license (A business-friendly OSS license).
-apache.org/licenses/LICENSE-2.0 github.com/Pi4J/pi4j-v2/blob/master/LICENSE.txt Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
-Definitions.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>关于 on Pi4J</title>
+    <link>https://pi4j.com/about/</link>
+    <description>Recent content in 关于 on Pi4J</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://pi4j.com/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>早期版本 (V.1)</title>
+      <link>https://pi4j.com/about/previous-version-v1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://pi4j.com/about/previous-version-v1/</guid>
+      <description>1.X 版本文档 Pi4J 1.4 版本  发行于 2021-03-03 支持 JDK/JRE 11 和 64-bit ARM 架构平台 这是 Pi4J 1.x 的最后一个版本 Pi4J 项目现在将重点放在使用 Java 程序访问、控制 Raspberry Pi 平台的核心 I/O 以及功能的通信上 项目更新到 Apache 2.0 许可 移除了 pi4j-device 和 pi4j-gpio-extension 模块 将不再支持 Odroid、BananaPi、BPi、NanoPi、OrangePi 平台 改进和修复内容可以在这里查看： GitHub Issues (v1.4) 提前引入了 Java-modules 这也将是 V.2 版本的一部分 Documentation website V1.4  Pi4J 1.3 版本  发布于 2021-01-29 对 Pi 4B, 400, 和 Compute Module 4 提供了支持 改进和修复内容可以在这里查看： GitHub Issues (v1.</description>
+    </item>
+    
+    <item>
+      <title>新特性 (V.2)</title>
+      <link>https://pi4j.com/about/new-in-v2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://pi4j.com/about/new-in-v2/</guid>
+      <description>2.0 新特性 Pi4J 2.0 版本带来了许多新功能，以及一个全新的体系结构，它将专注于可扩展性、简化的集成和先进的 Java API，主要有以下内容：
+ 流畅的 API 接口 可控的上下文环境 可扩展的插件架构体系 用于创建新 I/O 实例的生成器模式 完善的文档，和源代码 硬件 PWM 支持 Java 11  未来计划：
+ 通过 Pi4J 注解进行依赖注入 支持远程 I/O（通过TCP/IP）  除了上面列出的功能外，Pi4J 2.0 版本还放弃了旧的 WiringPi 引脚编号方案，转而采用更为传统和常用的 Broadcom 引脚编号方案。多年来，这种引脚编号方案一直比较混乱，对于初学者来说经常摸不到头脑。并且由于新的 Raspberry Pi 型号引入了新的 GPIO 引脚，以至于维护起来有些麻烦。今后，Pi4J将只使用 Broadcom（BCM）的引脚编号方案。
+WiringPi 项目现在已经废弃 (详情请查看： wiringpi.com/wiringpi-deprecated/)。Pi4J 2.0 版本将不再基于WiringPi，而是在内部使用 PIGPIO (http://abyz.me.uk/rpi/pigpio/) 库进行底层集成。通过这次迁移，运用 PIGPIO 守护进程，我们还将支持远程 I/O 特性（通过 TCP 连接）
+和 V.1 版本对比有什么不同 从 Pi4J 2.0 版本开始构建以来，Pi4J 项目将重点放在了用 Java 程序，控制和访问树莓派平台的核心 I/O 。在 Pi4J 的早期版本中，在项目范围上过于宽泛，导致项目严重膨胀，以至于项目难以维护。现在的目标转移到树莓派底层的 I/O 功能范围内，并将更快的响应 bug 的修复，以及新平台的引入。新的项目范围通过降低访问底层 I/O 复杂性，更好的额服务于 Java 社区。</description>
+    </item>
+    
+    <item>
+      <title>发行说明</title>
+      <link>https://pi4j.com/about/release-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://pi4j.com/about/release-notes/</guid>
+      <description>2021-08-26 2.0 它来了它来了！经过大量工作，现在我们向你汇报 Pi4J 库的成果！
+2.0 版本的重要变更：
+ 支持 Java 11 或者更高 打破 V1 版本的架构，进行了完全的重构（详情请参考： pi4j.com/architecture） 不再包含外围设备的支持逻辑，附加芯片组/板的逻辑被抽离出核心模块 更易于扩展、测试和维护 使用 PiGpio 作为原生库（在 V1 版本中使用的是 WiringPi 在 2019 年被弃用） 模块化的构建，完全支持 Java 的未来发展 少量的外部依赖（仅仅使用到 SLF4J） 不同的场景示例代码（还有 JavaFX）详情请参考： pi4j.com/getting-started 更多请参考：pi4j.com/about/new-in-v2  </description>
+    </item>
+    
+    <item>
+      <title>开源证书</title>
+      <link>https://pi4j.com/about/license/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://pi4j.com/about/license/</guid>
+      <description>Pi4J 2.0 版本是基于Apache 2.0 证书（商业友好的 OSS 证书）
+ apache.org/licenses/LICENSE-2.0 github.com/Pi4J/pi4j-v2/blob/master/LICENSE.txt   Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+  Definitions.
 &amp;ldquo;License&amp;rdquo; shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.
-&amp;ldquo;Licensor&amp;rdquo; shall mean the copyright owner or entity authorized by the copyright owner that is granting the License.</description></item><item><title>The Team</title><link>https://pi4j.com/about/team/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pi4j.com/about/team/</guid><description>Robert Savage, Project Founder, Architect, Lead Developer. Principal Software Architect/Engineer. Consultant, technology enthusiast, entrepreneur, open source contributor, technology blogger. Founder at shadeBlue, LLC and SavageSoftware, LLC. Robert has a more than 20 year career working in the professional audio visual and home/commercial automation industry and an extensive background in developing technology solutions with a special focus on home automation and hardware/firmware/software integration.</description></item></channel></rss>
+&amp;ldquo;Licensor&amp;rdquo; shall mean the copyright owner or entity authorized by the copyright owner that is granting the License.</description>
+    </item>
+    
+    <item>
+      <title>团队</title>
+      <link>https://pi4j.com/about/team/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://pi4j.com/about/team/</guid>
+      <description>Robert Savage, Project Founder, Architect, Lead Developer. Principal Software Architect/Engineer. Consultant, technology enthusiast, entrepreneur, open source contributor, technology blogger. Founder at shadeBlue, LLC and SavageSoftware, LLC. Robert has a more than 20 year career working in the professional audio visual and home/commercial automation industry and an extensive background in developing technology solutions with a special focus on home automation and hardware/firmware/software integration.</description>
+    </item>
+    
+  </channel>
+</rss>

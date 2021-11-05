@@ -1,6 +1,48 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Digital Input on Pi4J</title><link>https://pi4j.com/tags/digital-input/</link><description>Recent content in Digital Input on Pi4J</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://pi4j.com/tags/digital-input/index.xml" rel="self" type="application/rss+xml"/><item><title>Minimal example application</title><link>https://pi4j.com/getting-started/minimal-example-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pi4j.com/getting-started/minimal-example-application/</guid><description>GITHUB PROJECT: https://github.com/Pi4J/pi4j-example-minimal
-In the &amp;ldquo;pi4j-example-minimal&amp;rdquo; GitHub project you can find a project which contains the minimal code to control a digital input and output with Pi4J. The project is further described on this page. The application will toggle an LED on/off and each time you press the button, the toggling speed increases. When you have pushed the button 5 times, the application stops.
-Wiring This minimal example application uses this wiring:</description></item><item><title>User interface with JavaFX</title><link>https://pi4j.com/getting-started/user-interface-with-javafx/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pi4j.com/getting-started/user-interface-with-javafx/</guid><description>GITHUB PROJECT: https://github.com/Pi4J/pi4j-example-javafx
-JavaFX is a framework to create user interfaces for desktop (Windows, Mac, Linux) and mobile phones. JavaFX is an opensource project which is documented on openjfx.io and the sources are available in this GitHub project.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Digital Input on Pi4J</title>
+    <link>https://pi4j.com/tags/digital-input/</link>
+    <description>Recent content in Digital Input on Pi4J</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://pi4j.com/tags/digital-input/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>最小示例程序</title>
+      <link>https://pi4j.com/getting-started/minimal-example-application/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://pi4j.com/getting-started/minimal-example-application/</guid>
+      <description>GITHUB 项目地址： https://github.com/Pi4J/pi4j-example-minimal
+ &amp;ldquo;pi4j-example-minimal&amp;rdquo; GitHub 项目 包含使用 Pi4J 控制数字输入和输出的示例小程序。本章会详细解释这个项目。这个程序会打开/关闭 LED，每次按下按钮时，闪烁频率会加大。按下第 5 次的时候，应用程序将停止。
+  接线 这个示例程序接线如下图所示：
+构建程序 Pi4J 项目使用到的最主要的构建工具就是 Maven，但是在这个示例中我们提供了 Maven 和 Gradle 两种构建方式，你可以根据你的情况进行选择性使用。
+Maven 这个示例程序可以使用 Apache Maven 3.6（或者更高版本）Java 11 OpenJDK（或者更高版本）如前几页所述。必须在构建此项目之前安装这些工具。可以使用以下命令下载所有项目依赖并编译Java模块。您可以使用 Java 11+ 直接在 Raspberry Pi 上构建此项目。
+mvn clean package Gradle 您还可以使用 Gradle 6.6（或更高版本）和 Java 11 OpenJDK（或更高版本）。 Gradle 包装器的使用方法参考 docs.gradle.org。 Gradle 配置文件参考 build.gradle-file
+Linux 系统:
+./gradlew build Windows 系统:
+gradlew.bat build pom.xml 依赖 对 Maven 项目来说，pom.xml 中定义了项目的所有依赖，以及构建流程。 在本项目中，我们使用了 slf4 来打印日志， pi4j-core 和 pi4j-plugins 来控制树莓派 GPIO 为了方便版本升级，我们添加了版本的配置文件。</description>
+    </item>
+    
+    <item>
+      <title>User interface with JavaFX</title>
+      <link>https://pi4j.com/getting-started/user-interface-with-javafx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://pi4j.com/getting-started/user-interface-with-javafx/</guid>
+      <description>GITHUB PROJECT: https://github.com/Pi4J/pi4j-example-javafx
+ JavaFX is a framework to create user interfaces for desktop (Windows, Mac, Linux) and mobile phones. JavaFX is an opensource project which is documented on openjfx.io and the sources are available in this GitHub project.
 The main goal of Java has always been to be able to create applications which are &amp;ldquo;write once, run everywhere&amp;rdquo;. JavaFX promises the same for Graphical User Interface applications.
-Gluon is the main maintainer of the OpenJFX project and offers commercial support to companies who want to use JavaFX in critical applications.</description></item><item><title>Digital Input (GPIO)</title><link>https://pi4j.com/documentation/io-examples/digital-input/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pi4j.com/documentation/io-examples/digital-input/</guid><description>Similar to a digital output pin, a digital input translates an input value of 0V or 3.3V to the value false/true. This means any type of device which can toggle between 3.3V and 0V, can generate an input value to the Raspberry Pi. Here the most basic example is a toggle button. If you use other components, always check which is the voltage provided by the device. Or if you use a power pin from the Raspberry Pi itself, to use a 3.</description></item></channel></rss>
+Gluon is the main maintainer of the OpenJFX project and offers commercial support to companies who want to use JavaFX in critical applications.</description>
+    </item>
+    
+    <item>
+      <title>Digital Input (GPIO)</title>
+      <link>https://pi4j.com/documentation/io-examples/digital-input/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://pi4j.com/documentation/io-examples/digital-input/</guid>
+      <description>Similar to a digital output pin, a digital input translates an input value of 0V or 3.3V to the value false/true. This means any type of device which can toggle between 3.3V and 0V, can generate an input value to the Raspberry Pi. Here the most basic example is a toggle button. If you use other components, always check which is the voltage provided by the device. Or if you use a power pin from the Raspberry Pi itself, to use a 3.</description>
+    </item>
+    
+  </channel>
+</rss>

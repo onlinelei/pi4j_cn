@@ -8,35 +8,23 @@ tags: ["Digital Input", "Digital Output"]
 GITHUB 项目地址： [https://github.com/Pi4J/pi4j-example-minimal](https://github.com/Pi4J/pi4j-example-minimal)
 {{% /notice %}}
 
-在 ["pi4j-example-minimal" GitHub 项目](https://github.com/Pi4J/pi4j-example-minimal) 中，您可以找到一个项目，其中包含使用 Pi4J 控制数字输入和输出的最少代码。本页进一步描述了该项目。该应用程序将打开/关闭 LED，每次按下按钮时，切换速度都会增加。当您按下按钮 5 次时，应用程序将停止。
-
-
-
-
-
-
-
-
-In the ["pi4j-example-minimal" GitHub project](https://github.com/Pi4J/pi4j-example-minimal) you can find a project which contains the minimal code to control a digital input and output with Pi4J. The project is further described on this page. The application will toggle an LED on/off and each time you press the button, the toggling speed increases. When you have pushed the button 5 times, the application stops.
+["pi4j-example-minimal" GitHub 项目](https://github.com/Pi4J/pi4j-example-minimal) 包含使用 Pi4J 控制数字输入和输出的示例小程序。本章会详细解释这个项目。这个程序会打开/关闭 LED，每次按下按钮时，闪烁频率会加大。按下第 5 次的时候，应用程序将停止。
 
 {{< vimeo 525570174 >}}
 
-## Wiring
+## 接线
 
-This minimal example application uses this wiring:
+这个示例程序接线如下图所示：
 
 ![](/assets/getting-started/minimal/led-button_bb.png)
 
-## Building the application
+## 构建程序
 
-The main build tool used by the Pi4J project is Maven, but for this example we provided both the Maven and Gradle approach,
-so you can select the tool you prefer.
+Pi4J 项目使用到的最主要的构建工具就是 Maven，但是在这个示例中我们提供了 Maven 和 Gradle 两种构建方式，你可以根据你的情况进行选择性使用。
 
 ### Maven
 
-This project can be built with Apache Maven 3.6 (or later) and Java 11 OpenJDK (or later). These prerequisites must be 
-installed prior to building this project as described on the previous pages. The following command can be used to 
-download all project dependencies and compile the Java module. You can build this project directly on a Raspberry Pi with Java 11+.
+这个示例程序可以使用 Apache Maven 3.6（或者更高版本）Java 11 OpenJDK（或者更高版本）如前几页所述。必须在构建此项目之前安装这些工具。可以使用以下命令下载所有项目依赖并编译Java模块。您可以使用 Java 11+ 直接在 Raspberry Pi 上构建此项目。
 
 ```
 mvn clean package
@@ -44,28 +32,26 @@ mvn clean package
 
 ### Gradle
 
-You can also use the Gradle Build Tool from these same sources. Use version 6.6 (or later) and Java 11 OpenJDK (or later). 
-The Gradle wrapper is used as described on [docs.gradle.org](https://docs.gradle.org/current/userguide/gradle_wrapper.html).
-The Gradle configuraion file [build.gradle-file](https://github.com/Pi4J/pi4j-example-minimal/blob/master/build.gradle) 
-is included in the sources.
+您还可以使用 Gradle 6.6（或更高版本）和 Java 11 OpenJDK（或更高版本）。
+Gradle 包装器的使用方法参考 [docs.gradle.org](https://docs.gradle.org/current/userguide/gradle_wrapper.html)。
+Gradle 配置文件参考 [build.gradle-file](https://github.com/Pi4J/pi4j-example-minimal/blob/main/build.gradle) 
 
-On Linux:
+Linux 系统:
 
 ```
 ./gradlew build
 ```
 
-On Windows:
+Windows 系统:
 
 ```
 gradlew.bat build
 ```
 
-## Dependency in pom.xml
+## pom.xml 依赖
 
-For the Maven approach, a pom.xml file defines all the dependencies, and the build process.
-
-In this project we will be using slf4 for logging, pi4j-core and the pi4j-plugins for the Raspberry Pi and PiGPIO. To make the versions easy to update, we add those numbers as properties. 
+对 Maven 项目来说，pom.xml 中定义了项目的所有依赖，以及构建流程。
+在本项目中，我们使用了 slf4 来打印日志， pi4j-core 和 pi4j-plugins 来控制树莓派 GPIO 为了方便版本升级，我们添加了版本的配置文件。
 
 ```xml
 <properties>
@@ -75,7 +61,7 @@ In this project we will be using slf4 for logging, pi4j-core and the pi4j-plugin
 </properties>
 ```
 
-These are the dependencies we need:
+下面是本项目依赖的包：
 
 ```xml
 <dependencies>
@@ -111,9 +97,10 @@ These are the dependencies we need:
 </dependencies>
 ```
 
-## Pi4J code blocks which are used
+## 使用到的 Pi4J 代码块
 
-### Initialization
+### 初始化
+
 
 Before you can use Pi4J you must initialize a new runtime context.
 

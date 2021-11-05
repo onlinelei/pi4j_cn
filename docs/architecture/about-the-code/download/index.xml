@@ -1,3 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Download/Install on Pi4J</title><link>https://pi4j.com/architecture/about-the-code/download/</link><description>Recent content in Download/Install on Pi4J</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://pi4j.com/architecture/about-the-code/download/index.xml" rel="self" type="application/rss+xml"/><item><title>Direct Download</title><link>https://pi4j.com/architecture/about-the-code/download/direct-download/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pi4j.com/architecture/about-the-code/download/direct-download/</guid><description>Direct downloads are not yet available.
-Please build the project from sources available on GitHub Or acquire the compiled artifacts from the Maven SNAPSHOT repository.</description></item><item><title>Maven Repository</title><link>https://pi4j.com/architecture/about-the-code/download/repository/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pi4j.com/architecture/about-the-code/download/repository/</guid><description>Pi4J V.2 is not yet released or published to Maven Central.
-Please build the project from sources available on GitHub Or acquire the compiled artifacts from this Maven SNAPSHOT repository.</description></item><item><title>Installation</title><link>https://pi4j.com/architecture/about-the-code/download/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pi4j.com/architecture/about-the-code/download/install/</guid><description>This project is still in development and thus no package installers are available at this time.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>下载/安装 on Pi4J</title>
+    <link>https://pi4j.com/architecture/about-the-code/download/</link>
+    <description>Recent content in 下载/安装 on Pi4J</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://pi4j.com/architecture/about-the-code/download/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>直接下载</title>
+      <link>https://pi4j.com/architecture/about-the-code/download/direct-download/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://pi4j.com/architecture/about-the-code/download/direct-download/</guid>
+      <description>目前不支持直接下载
+请根据 GitHub 源码在本地构建 或者从 Maven SNAPSHOT 仓库 获取编译好的版本</description>
+    </item>
+    
+    <item>
+      <title>Maven 仓库</title>
+      <link>https://pi4j.com/architecture/about-the-code/download/repository/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://pi4j.com/architecture/about-the-code/download/repository/</guid>
+      <description>Pi4J V.2 尚未发布或发布到 Maven Central。
+请根据 GitHub 源码在本地构建 或者从 Maven SNAPSHOT 仓库 获取编译好的版本</description>
+    </item>
+    
+    <item>
+      <title>安装</title>
+      <link>https://pi4j.com/architecture/about-the-code/download/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://pi4j.com/architecture/about-the-code/download/install/</guid>
+      <description>该项目仍在开发中，因此目前没有可用的软件包安装程序。</description>
+    </item>
+    
+  </channel>
+</rss>
